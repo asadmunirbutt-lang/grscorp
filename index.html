@@ -4,27 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- SEO -->
 <title>Global Relief and Support Corporation — Extending Support for Autism | GRSCorp</title>
 <meta name="description" content="GRSCorp is a 501(c)(3) nonprofit empowering individuals with autism and their families through advocacy, education, community programs, and a 101-acre nature preserve in New York.">
 <meta name="keywords" content="autism nonprofit New York, autism support Clifton Park NY, autism advocacy, autism awareness, autism family support, special education support, SEPTA New York, autism nature preserve, GRSCorp, Global Relief and Support Corporation">
 <meta name="author" content="Global Relief and Support Corporation">
 <meta name="robots" content="index, follow">
 
-<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Global Relief and Support Corporation — Extending Support for Autism">
 <meta property="og:description" content="Empowering individuals with autism to lead fulfilling lives through advocacy, education, community programs, and nature-based initiatives across New York State.">
 <meta property="og:url" content="https://grscorp.org">
 <meta property="og:site_name" content="GRSCorp">
 
-<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Global Relief and Support Corporation">
 <meta name="twitter:description" content="Empowering individuals with autism through advocacy, education, and community.">
 <meta name="twitter:site" content="@grscorp5">
 
-<!-- Schema -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -55,7 +51,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-/* ── RESET & BASE ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
@@ -68,7 +63,6 @@ body {
 img { max-width: 100%; display: block; }
 a { text-decoration: none; }
 
-/* ── VARIABLES ── */
 :root {
   --blue:       #1a4d8f;
   --blue-dark:  #0d2d5e;
@@ -85,7 +79,6 @@ a { text-decoration: none; }
   --sans:       'Inter', sans-serif;
 }
 
-/* ── NAVBAR ── */
 nav {
   position: sticky;
   top: 0;
@@ -98,11 +91,7 @@ nav {
   justify-content: space-between;
   height: 68px;
 }
-.nav-logo {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.2;
-}
+.nav-logo { display: flex; flex-direction: column; line-height: 1.2; }
 .nav-logo-main {
   font-family: var(--serif);
   font-size: 1.15rem;
@@ -139,7 +128,7 @@ nav {
   font-weight: 600 !important;
   transition: background 0.2s !important;
 }
-.nav-cta:hover { background: var(--blue-dark) !important; color: #fff !important; }
+.nav-cta:hover { background: var(--blue-dark) !important; }
 .nav-mobile-btn {
   display: none;
   background: none;
@@ -155,7 +144,6 @@ nav {
   height: 2px;
   background: var(--text);
   border-radius: 2px;
-  transition: all 0.3s;
 }
 .mobile-menu {
   display: none;
@@ -180,7 +168,6 @@ nav {
 }
 .mobile-menu a:last-child { border-bottom: none; }
 
-/* ── HERO ── */
 .hero {
   background: linear-gradient(150deg, #0d2240 0%, #1a4d8f 50%, #0d7a6e 100%);
   color: #fff;
@@ -294,10 +281,8 @@ nav {
   font-size: 12px;
   color: rgba(255,255,255,0.6);
   font-weight: 400;
-  letter-spacing: 0.02em;
 }
 
-/* ── SECTION SHARED ── */
 .section { padding: 88px 32px; }
 .section-alt { background: var(--bg-soft); }
 .section-inner { max-width: 1100px; margin: 0 auto; }
@@ -325,7 +310,6 @@ nav {
 }
 .section-header { margin-bottom: 56px; }
 
-/* ── MISSION STRIP ── */
 .mission-strip {
   background: var(--blue-dark);
   padding: 56px 32px;
@@ -349,12 +333,7 @@ nav {
   color: var(--gold);
 }
 
-/* ── PROGRAMS ── */
-.programs-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
+.programs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .program-card {
   background: #fff;
   border: 1.5px solid var(--border);
@@ -383,32 +362,11 @@ nav {
 .ic-green  { background: #f0fdf4; }
 .ic-purple { background: #f5f3ff; }
 .ic-coral  { background: #fff1ee; }
-.program-card h3 {
-  font-family: var(--sans);
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: var(--text);
-  margin-bottom: 10px;
-}
-.program-card p {
-  font-size: 0.9rem;
-  color: var(--text-soft);
-  line-height: 1.65;
-}
+.program-card h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin-bottom: 10px; }
+.program-card p { font-size: 0.9rem; color: var(--text-soft); line-height: 1.65; }
 
-/* ── STORY SECTION ── */
-.story-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  align-items: center;
-}
-.story-text p {
-  font-size: 1rem;
-  color: var(--text-mid);
-  margin-bottom: 20px;
-  line-height: 1.75;
-}
+.story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.story-text p { font-size: 1rem; color: var(--text-mid); margin-bottom: 20px; line-height: 1.75; }
 .story-text p:last-child { margin-bottom: 0; }
 .story-quote {
   background: var(--gold-light);
@@ -425,18 +383,8 @@ nav {
   margin-bottom: 8px !important;
   line-height: 1.5;
 }
-.story-quote cite {
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 600;
-  color: var(--text-soft);
-  letter-spacing: 0.5px;
-}
-.story-visual {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
+.story-quote cite { font-size: 12px; font-style: normal; font-weight: 600; color: var(--text-soft); }
+.story-visual { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .story-card {
   background: #fff;
   border: 1.5px solid var(--border);
@@ -447,7 +395,6 @@ nav {
 .story-card:first-child {
   grid-column: 1 / -1;
   background: var(--blue-dark);
-  color: #fff;
   border-color: transparent;
 }
 .story-card-num {
@@ -458,15 +405,10 @@ nav {
   line-height: 1;
   margin-bottom: 6px;
 }
-.story-card-label {
-  font-size: 0.82rem;
-  color: rgba(255,255,255,0.7);
-  line-height: 1.4;
-}
+.story-card-label { font-size: 0.82rem; color: rgba(255,255,255,0.7); line-height: 1.4; }
 .story-card:not(:first-child) .story-card-num { color: var(--blue); }
 .story-card:not(:first-child) .story-card-label { color: var(--text-soft); }
 
-/* ── INITIATIVES ── */
 .initiatives-list { display: flex; flex-direction: column; gap: 24px; }
 .initiative-item {
   background: #fff;
@@ -490,17 +432,8 @@ nav {
   font-weight: 600;
   min-width: 44px;
 }
-.initiative-content h3 {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--text);
-  margin-bottom: 6px;
-}
-.initiative-content p {
-  font-size: 0.9rem;
-  color: var(--text-soft);
-  line-height: 1.6;
-}
+.initiative-content h3 { font-size: 1rem; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+.initiative-content p { font-size: 0.9rem; color: var(--text-soft); line-height: 1.6; }
 .initiative-badge {
   background: var(--bg-soft);
   border: 1px solid var(--border);
@@ -517,12 +450,7 @@ nav {
 .badge-active  { background: #eef3fb; border-color: #93c5fd; color: var(--blue); }
 .badge-growing { background: #fef8ec; border-color: #fcd34d; color: #92400e; }
 
-/* ── TEAM ── */
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
+.team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
 .team-card {
   background: #fff;
   border: 1.5px solid var(--border);
@@ -531,10 +459,7 @@ nav {
   text-align: center;
   transition: transform 0.2s, box-shadow 0.2s;
 }
-.team-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 28px rgba(26,77,143,0.09);
-}
+.team-card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(26,77,143,0.09); }
 .team-avatar {
   width: 64px;
   height: 64px;
@@ -548,25 +473,10 @@ nav {
   color: #fff;
   margin: 0 auto 16px;
 }
-.team-name {
-  font-family: var(--serif);
-  font-size: 1.05rem;
-  color: var(--text);
-  margin-bottom: 4px;
-}
-.team-role {
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--teal);
-  letter-spacing: 0.5px;
-}
+.team-name { font-family: var(--serif); font-size: 1.05rem; color: var(--text); margin-bottom: 4px; }
+.team-role { font-size: 12px; font-weight: 500; color: var(--teal); }
 
-/* ── BLOGS ── */
-.blogs-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
+.blogs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .blog-card {
   background: #fff;
   border: 1.5px solid var(--border);
@@ -576,64 +486,21 @@ nav {
   display: flex;
   flex-direction: column;
 }
-.blog-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(26,77,143,0.1);
-}
+.blog-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(26,77,143,0.1); }
 .blog-card-top { height: 8px; }
-.blog-card-body {
-  padding: 28px 26px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-.blog-tag {
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: var(--teal);
-  margin-bottom: 10px;
-}
-.blog-card h3 {
-  font-size: 0.97rem;
-  font-weight: 600;
-  color: var(--text);
-  line-height: 1.45;
-  margin-bottom: 12px;
-  flex: 1;
-}
+.blog-card-body { padding: 28px 26px; flex: 1; display: flex; flex-direction: column; }
+.blog-tag { font-size: 10px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--teal); margin-bottom: 10px; }
+.blog-card h3 { font-size: 0.97rem; font-weight: 600; color: var(--text); line-height: 1.45; margin-bottom: 12px; flex: 1; }
 .blog-date { font-size: 12px; color: var(--text-soft); margin-top: auto; }
 .blog-card a { color: inherit; }
 .blog-card a:hover h3 { color: var(--blue); }
 
-/* ── GET INVOLVED ── */
-.involved-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-}
-.involved-card {
-  border-radius: 20px;
-  padding: 44px 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-.involved-card.donate-card {
-  background: var(--blue-dark);
-  color: #fff;
-}
-.involved-card.volunteer-card {
-  background: var(--gold-light);
-  border: 1.5px solid #fde68a;
-}
+.involved-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.involved-card { border-radius: 20px; padding: 44px 40px; display: flex; flex-direction: column; gap: 16px; }
+.involved-card.donate-card { background: var(--blue-dark); color: #fff; }
+.involved-card.volunteer-card { background: var(--gold-light); border: 1.5px solid #fde68a; }
 .involved-card-icon { font-size: 36px; }
-.involved-card h3 {
-  font-family: var(--serif);
-  font-size: 1.6rem;
-  font-weight: 400;
-}
+.involved-card h3 { font-family: var(--serif); font-size: 1.6rem; font-weight: 400; }
 .donate-card h3 { color: #fff; }
 .volunteer-card h3 { color: var(--blue-dark); }
 .involved-card p { font-size: 0.95rem; line-height: 1.65; }
@@ -664,20 +531,9 @@ nav {
 }
 .btn-volunteer:hover { opacity: 0.88; transform: translateY(-1px); }
 
-/* ── NEWSLETTER ── */
-.newsletter {
-  background: var(--bg-soft);
-  border-top: 1px solid var(--border);
-  padding: 60px 32px;
-  text-align: center;
-}
+.newsletter { background: var(--bg-soft); border-top: 1px solid var(--border); padding: 60px 32px; text-align: center; }
 .newsletter-inner { max-width: 520px; margin: 0 auto; }
-.newsletter h2 {
-  font-family: var(--serif);
-  font-size: 1.6rem;
-  color: var(--blue-dark);
-  margin-bottom: 10px;
-}
+.newsletter h2 { font-family: var(--serif); font-size: 1.6rem; color: var(--blue-dark); margin-bottom: 10px; }
 .newsletter p { font-size: 0.95rem; color: var(--text-soft); margin-bottom: 28px; }
 .newsletter-form { display: flex; gap: 10px; max-width: 440px; margin: 0 auto; }
 .newsletter-form input {
@@ -707,31 +563,11 @@ nav {
 }
 .newsletter-form button:hover { background: var(--blue-dark); }
 
-/* ── FOOTER ── */
-footer {
-  background: var(--blue-dark);
-  color: rgba(255,255,255,0.75);
-  padding: 64px 32px 40px;
-}
+footer { background: var(--blue-dark); color: rgba(255,255,255,0.75); padding: 64px 32px 40px; }
 .footer-inner { max-width: 1100px; margin: 0 auto; }
-.footer-top {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 48px;
-  margin-bottom: 48px;
-}
-.footer-brand-name {
-  font-family: var(--serif);
-  font-size: 1.2rem;
-  color: #fff;
-  margin-bottom: 12px;
-}
-.footer-brand-desc {
-  font-size: 13px;
-  line-height: 1.7;
-  color: rgba(255,255,255,0.55);
-  margin-bottom: 20px;
-}
+.footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+.footer-brand-name { font-family: var(--serif); font-size: 1.2rem; color: #fff; margin-bottom: 12px; }
+.footer-brand-desc { font-size: 13px; line-height: 1.7; color: rgba(255,255,255,0.55); margin-bottom: 20px; }
 .footer-badge {
   display: inline-block;
   background: rgba(255,255,255,0.08);
@@ -742,20 +578,9 @@ footer {
   border-radius: 100px;
   font-weight: 500;
 }
-.footer-col h4 {
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.4);
-  margin-bottom: 16px;
-}
+.footer-col h4 { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 16px; }
 .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-.footer-col ul a {
-  font-size: 13px;
-  color: rgba(255,255,255,0.6);
-  transition: color 0.2s;
-}
+.footer-col ul a { font-size: 13px; color: rgba(255,255,255,0.6); transition: color 0.2s; }
 .footer-col ul a:hover { color: #fff; }
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,0.1);
@@ -783,7 +608,6 @@ footer {
 }
 .footer-social a:hover { background: rgba(255,255,255,0.18); color: #fff; }
 
-/* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
   .programs-grid { grid-template-columns: repeat(2, 1fr); }
   .team-grid { grid-template-columns: repeat(2, 1fr); }
@@ -821,7 +645,6 @@ footer {
 </head>
 <body>
 
-<!-- NAVBAR -->
 <nav role="navigation" aria-label="Main navigation">
   <a href="/" class="nav-logo" aria-label="GRSCorp Home">
     <span class="nav-logo-main">GRS Corp</span>
@@ -848,10 +671,10 @@ footer {
   <a href="#team">Our Team</a>
   <a href="#blogs">Blog</a>
   <a href="https://grscorp.us/volunteer/" target="_blank">Volunteer</a>
+  <a href="https://grscorp.us/contact/" target="_blank">Contact</a>
   <a href="https://www.paypal.com/donate/?hosted_button_id=JWDEJU6LHXD24" target="_blank" rel="noopener">Donate Now</a>
 </div>
 
-<!-- HERO -->
 <header class="hero" role="banner">
   <div class="hero-inner">
     <span class="hero-badge">IRS-Approved 501(c)(3) Nonprofit · Founded 2021</span>
@@ -882,7 +705,6 @@ footer {
   </div>
 </header>
 
-<!-- MISSION STRIP -->
 <section class="mission-strip" aria-label="Mission statement">
   <div class="mission-strip-inner">
     <p>"Our mission is to empower individuals with autism to lead fulfilling lives, while fostering a culture of acceptance, understanding, and inclusion in diverse communities."</p>
@@ -890,7 +712,6 @@ footer {
   </div>
 </section>
 
-<!-- ABOUT -->
 <section class="section" id="about" aria-labelledby="about-title">
   <div class="section-inner">
     <div class="story-grid">
@@ -923,7 +744,6 @@ footer {
   </div>
 </section>
 
-<!-- PROGRAMS -->
 <section class="section section-alt" id="programs" aria-labelledby="programs-title">
   <div class="section-inner">
     <div class="section-header">
@@ -935,7 +755,7 @@ footer {
       <div class="program-card">
         <div class="program-icon ic-blue">📣</div>
         <h3>Advocacy</h3>
-        <p>Championing autism rights at local, state, and national levels. We show up at school board meetings, legislative hearings, and community forums so that families don't have to fight alone.</p>
+        <p>Championing autism rights at local, state, and national levels. We show up at school board meetings, legislative hearings, and community forums so families don't have to fight alone.</p>
       </div>
       <div class="program-card">
         <div class="program-icon ic-teal">📚</div>
@@ -966,7 +786,6 @@ footer {
   </div>
 </section>
 
-<!-- INITIATIVES -->
 <section class="section" id="initiatives" aria-labelledby="initiatives-title">
   <div class="section-inner">
     <div class="section-header">
@@ -1003,7 +822,7 @@ footer {
         <div class="initiative-num">04</div>
         <div class="initiative-content">
           <h3>National Affiliates Network</h3>
-          <p>Building a network of local, state, and national affiliate organizations to ensure that families in every community have access to the support they need — not just in the Capital Region, but across the country.</p>
+          <p>Building a network of local, state, and national affiliate organizations to ensure families in every community have access to the support they need — not just in the Capital Region, but across the country.</p>
         </div>
         <span class="initiative-badge badge-growing">Growing</span>
       </div>
@@ -1011,7 +830,6 @@ footer {
   </div>
 </section>
 
-<!-- TEAM -->
 <section class="section section-alt" id="team" aria-labelledby="team-title">
   <div class="section-inner">
     <div class="section-header">
@@ -1048,7 +866,6 @@ footer {
   </div>
 </section>
 
-<!-- BLOGS -->
 <section class="section" id="blogs" aria-labelledby="blogs-title">
   <div class="section-inner">
     <div class="section-header">
@@ -1094,7 +911,6 @@ footer {
   </div>
 </section>
 
-<!-- GET INVOLVED -->
 <section class="section section-alt" aria-labelledby="involved-title">
   <div class="section-inner">
     <div class="section-header">
@@ -1118,7 +934,6 @@ footer {
   </div>
 </section>
 
-<!-- NEWSLETTER -->
 <section class="newsletter" aria-labelledby="newsletter-title">
   <div class="newsletter-inner">
     <h2 id="newsletter-title">Stay Connected</h2>
@@ -1131,7 +946,6 @@ footer {
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer role="contentinfo">
   <div class="footer-inner">
     <div class="footer-top">
@@ -1147,14 +961,18 @@ footer {
           <li><a href="https://grscorp.us/background/" target="_blank">Our Story</a></li>
           <li><a href="https://grscorp.us/board-members/" target="_blank">Board Members</a></li>
           <li><a href="https://grscorp.us/goals/" target="_blank">Our Goals</a></li>
+          <li><a href="https://grscorp.us/purpose/" target="_blank">Purpose</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Resources</h4>
         <ul>
           <li><a href="https://grscorp.us/what-causes-autism/" target="_blank">What Is Autism?</a></li>
+          <li><a href="https://grscorp.us/first-concern-to-action/" target="_blank">First Concern to Action</a></li>
           <li><a href="https://grscorp.us/learn-the-sign-of-autism/" target="_blank">Signs of Autism</a></li>
           <li><a href="https://grscorp.us/sensory-issues/" target="_blank">Sensory Issues</a></li>
+          <li><a href="https://grscorp.us/autism-diagnosis-criteria/" target="_blank">Diagnosis Criteria</a></li>
+          <li><a href="https://grscorp.us/medical-conditions-associated-with-autism/" target="_blank">Medical Conditions</a></li>
           <li><a href="https://grscorp.us/blogs/" target="_blank">All Blog Posts</a></li>
         </ul>
       </div>
@@ -1163,15 +981,17 @@ footer {
         <ul>
           <li><a href="https://www.paypal.com/donate/?hosted_button_id=JWDEJU6LHXD24" target="_blank">Donate</a></li>
           <li><a href="https://forms.gle/L3gGqSojyhkLXEKo9" target="_blank">Volunteer</a></li>
+          <li><a href="https://grscorp.us/gallery/" target="_blank">Gallery</a></li>
+          <li><a href="https://grscorp.us/training-services/" target="_blank">Training Services</a></li>
           <li><a href="https://grscorp.us/contact/" target="_blank">Contact Us</a></li>
           <li><a href="mailto:info@grscorp.us">info@grscorp.us</a></li>
+          <li><a href="https://grscorp.us/privacy-policy/" target="_blank">Privacy Policy</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <div class="footer-bottom-left">
-        © 2026 Global Relief and Support Corporation. All rights reserved. ·
-        <a href="https://grscorp.us/privacy-policy/" target="_blank" style="color:rgba(255,255,255,0.4); margin-left:4px;">Privacy Policy</a>
+        © 2026 Global Relief and Support Corporation. All rights reserved.
       </div>
       <div class="footer-social" aria-label="Social media links">
         <a href="https://www.facebook.com/GRSCORP.US/" target="_blank" rel="noopener" aria-label="Facebook">f</a>
