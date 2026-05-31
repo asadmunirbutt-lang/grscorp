@@ -390,6 +390,84 @@
             border-color: var(--primary);
             background: white;
         }
+        .share-section {
+            background: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+        }
+        .share-section h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+        .share-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+        }
+        .share-btn {
+            padding: 0.6rem 1rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+        .share-btn-email {
+            background: #EA4335;
+            color: white;
+        }
+        .share-btn-email:hover {
+            background: #d33826;
+            transform: translateY(-2px);
+        }
+        .share-btn-copy {
+            background: var(--accent-blue);
+            color: white;
+        }
+        .share-btn-copy:hover {
+            background: #0070a3;
+            transform: translateY(-2px);
+        }
+        .share-btn-facebook {
+            background: #1877F2;
+            color: white;
+        }
+        .share-btn-facebook:hover {
+            background: #0a66c2;
+            transform: translateY(-2px);
+        }
+        .share-btn-twitter {
+            background: #1DA1F2;
+            color: white;
+        }
+        .share-btn-twitter:hover {
+            background: #1a8cd8;
+            transform: translateY(-2px);
+        }
+        .share-test-section {
+            background: white;
+            border: 2px solid var(--border-light);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+        .share-test-section p {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+        }
+        .share-test-buttons {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
         .footer {
             background: var(--light-bg);
             padding: 1.5rem 2rem;
@@ -524,11 +602,21 @@
                     <p>Loading your personalized results...</p>
                 </div>
                 <div id="directoryContainer"></div>
-                <div class="form-embed-section">
-                    <h3>Get Resources & Follow-Up</h3>
-                    <p>Enter your information to receive personalized resources and support information:</p>
-                    <div id="googleFormContainer" style="margin-top: 1rem;">
-                        <p style="color: #666; font-size: 0.9rem;">⚠️ <strong>Note:</strong> Replace the Google Form ID below with your actual form ID. <a href="https://support.google.com/docs/answer/7032287" target="_blank" style="color: var(--accent-blue); text-decoration: none;">Learn how to create a Google Form</a></p>
+                <div class="share-section">
+                    <h3>📤 Share Your Results</h3>
+                    <p style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 1rem;">Share your screening results with friends, family, or healthcare providers.</p>
+                    <div class="share-buttons">
+                        <button class="share-btn share-btn-email" onclick="emailResults()">📧 Email Results</button>
+                        <button class="share-btn share-btn-copy" onclick="copyResultsLink()">📋 Copy Link</button>
+                        <button class="share-btn share-btn-facebook" onclick="shareToFacebook()">👥 Facebook</button>
+                        <button class="share-btn share-btn-twitter" onclick="shareToTwitter()">𝕏 Twitter</button>
+                    </div>
+                    <div class="share-test-section">
+                        <p><strong>💬 Share This Test With Others</strong></p>
+                        <p style="color: var(--text-gray); font-size: 0.85rem;">Invite friends and family to take the autism screening tool. The more people who understand themselves, the better.</p>
+                        <div class="share-test-buttons">
+                            <button class="share-btn share-btn-copy" onclick="shareTestLink()" style="flex: 1;">Copy Test Link</button>
+                        </div>
                     </div>
                 </div>
                 <div class="button-group">
@@ -638,16 +726,45 @@
         ];
 
         const professionals = [
-            { id: 1, name: "Dr. Sarah Mitchell, MD", title: "Developmental Pediatrician", state: "NY", city: "New York", specialty: "Autism Evaluation", phone: "(212) 555-0101", website: "Example", accepts_telehealth: true },
-            { id: 2, name: "Dr. James Chen, PhD", title: "Clinical Psychologist", state: "CA", city: "Los Angeles", specialty: "Autism Assessment", phone: "(213) 555-0102", website: "Example", accepts_telehealth: true },
-            { id: 3, name: "Dr. Maria Rodriguez, MD", title: "Developmental Pediatrician", state: "TX", city: "Houston", specialty: "Autism Diagnosis", phone: "(713) 555-0103", website: "Example", accepts_telehealth: false },
-            { id: 4, name: "Dr. Robert Williams, PhD", title: "Neuropsychologist", state: "FL", city: "Miami", specialty: "Neurodevelopmental Assessment", phone: "(305) 555-0104", website: "Example", accepts_telehealth: true },
-            { id: 5, name: "Dr. Jennifer Lee, MD", title: "Developmental Pediatrician", state: "WA", city: "Seattle", specialty: "Autism Evaluation & Support", phone: "(206) 555-0105", website: "Example", accepts_telehealth: true },
-            { id: 6, name: "Dr. Michael Davis, PhD", title: "Clinical Psychologist", state: "IL", city: "Chicago", specialty: "Adult Autism Assessment", phone: "(312) 555-0106", website: "Example", accepts_telehealth: true },
-            { id: 7, name: "Dr. Amanda Taylor, MD", title: "Developmental Pediatrician", state: "PA", city: "Philadelphia", specialty: "Autism Diagnosis", phone: "(215) 555-0107", website: "Example", accepts_telehealth: false },
-            { id: 8, name: "Dr. Kevin Brown, PhD", title: "Neuropsychologist", state: "MA", city: "Boston", specialty: "Comprehensive Autism Assessment", phone: "(617) 555-0108", website: "Example", accepts_telehealth: true },
-            { id: 9, name: "Dr. Lisa Anderson, MD", title: "Developmental Pediatrician", state: "CO", city: "Denver", specialty: "Autism Evaluation & Support", phone: "(303) 555-0109", website: "Example", accepts_telehealth: true },
-            { id: 10, name: "Dr. David Martinez, PhD", title: "Clinical Psychologist", state: "AZ", city: "Phoenix", specialty: "Adult & Child Autism Assessment", phone: "(602) 555-0110", website: "Example", accepts_telehealth: true }
+            { id: 1, name: "Dr. Sarah Mitchell, MD", title: "Developmental Pediatrician", state: "NY", city: "New York", specialty: "Autism Evaluation", phone: "(212) 555-0101", accepts_telehealth: true },
+            { id: 2, name: "Dr. Michael Foster, PhD", title: "Clinical Psychologist", state: "NY", city: "Buffalo", specialty: "Adult Autism Assessment", phone: "(716) 555-0115", accepts_telehealth: true },
+            { id: 3, name: "Dr. Lisa Goldstein, MD", title: "Developmental Pediatrician", state: "NY", city: "Rochester", specialty: "Child Autism Evaluation", phone: "(585) 555-0116", accepts_telehealth: false },
+
+            { id: 4, name: "Dr. James Chen, PhD", title: "Clinical Psychologist", state: "CA", city: "Los Angeles", specialty: "Autism Assessment", phone: "(213) 555-0102", accepts_telehealth: true },
+            { id: 5, name: "Dr. Patricia Alvarez, MD", title: "Developmental Pediatrician", state: "CA", city: "San Francisco", specialty: "Autism Diagnosis & Treatment", phone: "(415) 555-0117", accepts_telehealth: true },
+            { id: 6, name: "Dr. David Wong, PhD", title: "Neuropsychologist", state: "CA", city: "San Diego", specialty: "Comprehensive Assessment", phone: "(619) 555-0118", accepts_telehealth: true },
+
+            { id: 7, name: "Dr. Maria Rodriguez, MD", title: "Developmental Pediatrician", state: "TX", city: "Houston", specialty: "Autism Diagnosis", phone: "(713) 555-0103", accepts_telehealth: false },
+            { id: 8, name: "Dr. Marcus Johnson, PhD", title: "Clinical Psychologist", state: "TX", city: "Dallas", specialty: "Adult Autism Evaluation", phone: "(214) 555-0119", accepts_telehealth: true },
+            { id: 9, name: "Dr. Rachel Santos, MD", title: "Developmental Pediatrician", state: "TX", city: "Austin", specialty: "Autism Assessment", phone: "(512) 555-0120", accepts_telehealth: true },
+
+            { id: 10, name: "Dr. Robert Williams, PhD", title: "Neuropsychologist", state: "FL", city: "Miami", specialty: "Neurodevelopmental Assessment", phone: "(305) 555-0104", accepts_telehealth: true },
+            { id: 11, name: "Dr. Jessica Brown, MD", title: "Developmental Pediatrician", state: "FL", city: "Tampa", specialty: "Autism Evaluation", phone: "(813) 555-0121", accepts_telehealth: true },
+            { id: 12, name: "Dr. Christopher Lee, PhD", title: "Clinical Psychologist", state: "FL", city: "Orlando", specialty: "Child & Adult Assessment", phone: "(407) 555-0122", accepts_telehealth: true },
+
+            { id: 13, name: "Dr. Jennifer Lee, MD", title: "Developmental Pediatrician", state: "WA", city: "Seattle", specialty: "Autism Evaluation & Support", phone: "(206) 555-0105", accepts_telehealth: true },
+            { id: 14, name: "Dr. Thomas Harris, PhD", title: "Neuropsychologist", state: "WA", city: "Tacoma", specialty: "Comprehensive Assessment", phone: "(253) 555-0123", accepts_telehealth: true },
+            { id: 15, name: "Dr. Angela Martinez, MD", title: "Developmental Pediatrician", state: "WA", city: "Spokane", specialty: "Autism Diagnosis", phone: "(509) 555-0124", accepts_telehealth: true },
+
+            { id: 16, name: "Dr. Michael Davis, PhD", title: "Clinical Psychologist", state: "IL", city: "Chicago", specialty: "Adult Autism Assessment", phone: "(312) 555-0106", accepts_telehealth: true },
+            { id: 17, name: "Dr. Susan Clark, MD", title: "Developmental Pediatrician", state: "IL", city: "Springfield", specialty: "Autism Evaluation", phone: "(217) 555-0125", accepts_telehealth: false },
+            { id: 18, name: "Dr. Kevin O'Brien, PhD", title: "Clinical Psychologist", state: "IL", city: "Naperville", specialty: "Child Autism Assessment", phone: "(630) 555-0126", accepts_telehealth: true },
+
+            { id: 19, name: "Dr. Kevin Brown, PhD", title: "Neuropsychologist", state: "MA", city: "Boston", specialty: "Comprehensive Autism Assessment", phone: "(617) 555-0108", accepts_telehealth: true },
+            { id: 20, name: "Dr. Margaret Sullivan, MD", title: "Developmental Pediatrician", state: "MA", city: "Worcester", specialty: "Autism Evaluation", phone: "(508) 555-0127", accepts_telehealth: true },
+            { id: 21, name: "Dr. Daniel Murphy, PhD", title: "Clinical Psychologist", state: "MA", city: "Springfield", specialty: "Adult Assessment", phone: "(413) 555-0128", accepts_telehealth: true },
+
+            { id: 22, name: "Dr. Amanda Taylor, MD", title: "Developmental Pediatrician", state: "PA", city: "Philadelphia", specialty: "Autism Diagnosis", phone: "(215) 555-0107", accepts_telehealth: false },
+            { id: 23, name: "Dr. Richard Green, PhD", title: "Neuropsychologist", state: "PA", city: "Pittsburgh", specialty: "Comprehensive Assessment", phone: "(412) 555-0129", accepts_telehealth: true },
+            { id: 24, name: "Dr. Karen White, MD", title: "Developmental Pediatrician", state: "PA", city: "Allentown", specialty: "Child Autism Evaluation", phone: "(610) 555-0130", accepts_telehealth: true },
+
+            { id: 25, name: "Dr. Lisa Anderson, MD", title: "Developmental Pediatrician", state: "CO", city: "Denver", specialty: "Autism Evaluation & Support", phone: "(303) 555-0109", accepts_telehealth: true },
+            { id: 26, name: "Dr. James Wilson, PhD", title: "Clinical Psychologist", state: "CO", city: "Colorado Springs", specialty: "Adult Autism Assessment", phone: "(719) 555-0131", accepts_telehealth: true },
+            { id: 27, name: "Dr. Sandra Lopez, MD", title: "Developmental Pediatrician", state: "CO", city: "Boulder", specialty: "Autism Diagnosis", phone: "(303) 555-0132", accepts_telehealth: true },
+
+            { id: 28, name: "Dr. David Martinez, PhD", title: "Clinical Psychologist", state: "AZ", city: "Phoenix", specialty: "Adult & Child Autism Assessment", phone: "(602) 555-0110", accepts_telehealth: true },
+            { id: 29, name: "Dr. Emma Garcia, MD", title: "Developmental Pediatrician", state: "AZ", city: "Scottsdale", specialty: "Autism Evaluation", phone: "(480) 555-0133", accepts_telehealth: true },
+            { id: 30, name: "Dr. Nicholas Taylor, PhD", title: "Neuropsychologist", state: "AZ", city: "Tucson", specialty: "Comprehensive Assessment", phone: "(520) 555-0134", accepts_telehealth: true }
         ];
 
         let currentQuestion = 0;
@@ -790,6 +907,70 @@
             document.querySelector('.intro-section').classList.add('active');
             document.querySelector('.results-section').classList.remove('active');
             document.querySelector('.quiz-section').classList.remove('active');
+        }
+
+        function getResultsSummary() {
+            const totalScore = scores.reduce((a, b) => a + b, 0);
+            let category;
+            if (totalScore <= 10) {
+                category = 'Low Likelihood';
+            } else if (totalScore <= 20) {
+                category = 'Moderate Indicators';
+            } else {
+                category = 'High Likelihood';
+            }
+            return {
+                score: totalScore,
+                category: category,
+                state: userState.state,
+                age: userState.age
+            };
+        }
+
+        function emailResults() {
+            const results = getResultsSummary();
+            const subject = `Autism Screening Tool Results - Score: ${results.score}/30`;
+            const body = `I took the Free Autism Self-Assessment Screening Tool and wanted to share my results:%0D%0A%0D%0AScore: ${results.score} out of 30 points%0D%0ACategory: ${results.category}%0D%0AAge Range: ${results.age}%0D%0AState: ${results.state}%0D%0A%0D%0AYou can also take the test here: https://grscorp.org/autism-screening-test.html%0D%0A%0D%0ANote: This is a screening tool only, not a diagnosis. Please consult with a healthcare professional for evaluation.`;
+            window.location.href = `mailto:?subject=${subject}&body=${body}`;
+        }
+
+        function copyResultsLink() {
+            const results = getResultsSummary();
+            const resultsLink = `${window.location.origin}/autism-screening-test.html?score=${results.score}&category=${results.category}`;
+            navigator.clipboard.writeText(resultsLink).then(() => {
+                alert('Results link copied to clipboard! Share it with your healthcare provider or friends.');
+            }).catch(() => {
+                const fallback = `My autism screening score: ${results.score}/30 (${results.category}). Check it out: ${window.location.href}`;
+                navigator.clipboard.writeText(fallback).then(() => {
+                    alert('Results copied to clipboard!');
+                });
+            });
+        }
+
+        function shareToFacebook() {
+            const results = getResultsSummary();
+            const text = `I just completed the Free Autism Self-Assessment Screening Tool and got a score of ${results.score}/30. It's a helpful resource for understanding yourself better.`;
+            const url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}&quote=${encodeURIComponent(text)}`;
+            window.open(url, 'facebook-share-dialog', 'width=800,height=600');
+        }
+
+        function shareToTwitter() {
+            const results = getResultsSummary();
+            const text = `I just took the Free Autism Self-Assessment Screening Tool - Score: ${results.score}/30 (${results.category}). A helpful resource for understanding if professional evaluation might be beneficial. Check it out! #AutismAcceptance`;
+            const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(window.location.href)}`;
+            window.open(url, 'twitter-share-dialog', 'width=800,height=600');
+        }
+
+        function shareTestLink() {
+            const testLink = 'https://grscorp.org/autism-screening-test.html';
+            const message = `Take the Free Autism Self-Assessment Screening Tool. It's a quick 10-question quiz that takes 5-10 minutes. https://grscorp.org/autism-screening-test.html`;
+            navigator.clipboard.writeText(message).then(() => {
+                alert('Test link copied! You can paste it in emails, messages, or social media to invite others.');
+            }).catch(() => {
+                navigator.clipboard.writeText(testLink).then(() => {
+                    alert('Test link copied to clipboard!');
+                });
+            });
         }
 
     </script>
