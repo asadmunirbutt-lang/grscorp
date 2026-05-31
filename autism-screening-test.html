@@ -460,6 +460,40 @@
                 <div class="info-box" style="border-left-color: #00a86b; background: linear-gradient(135deg, rgba(0, 168, 107, 0.1) 0%, rgba(0, 168, 107, 0.05) 100%);">
                     <strong style="color: #00a86b;">Privacy:</strong> Your information is used only for resources. We don't sell or share your data.
                 </div>
+                <h2 style="margin-top: 1.5rem; font-size: 1.1rem; color: var(--primary);">Getting Started</h2>
+                <p style="margin-bottom: 1rem;">Please provide some basic information before taking the assessment:</p>
+                <div class="form-group">
+                    <label for="age">Age Range</label>
+                    <select id="age" required>
+                        <option value="">Select your age range</option>
+                        <option value="6-12">6-12 years</option>
+                        <option value="13-17">13-17 years</option>
+                        <option value="18-25">18-25 years</option>
+                        <option value="26-40">26-40 years</option>
+                        <option value="41-55">41-55 years</option>
+                        <option value="55+">55+ years</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="state">State</label>
+                    <select id="state" required>
+                        <option value="">Select your state</option>
+                        <option value="AZ">Arizona</option>
+                        <option value="CA">California</option>
+                        <option value="CO">Colorado</option>
+                        <option value="FL">Florida</option>
+                        <option value="IL">Illinois</option>
+                        <option value="MA">Massachusetts</option>
+                        <option value="NY">New York</option>
+                        <option value="PA">Pennsylvania</option>
+                        <option value="TX">Texas</option>
+                        <option value="WA">Washington</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="your@email.com" required>
+                </div>
                 <div class="button-group">
                     <button class="btn-primary" onclick="startQuiz()">Start Assessment</button>
                 </div>
@@ -758,50 +792,6 @@
             document.querySelector('.quiz-section').classList.remove('active');
         }
 
-        window.addEventListener('DOMContentLoaded', function() {
-            const introContent = document.querySelector('.intro-content');
-            if (introContent && !document.querySelector('form')) {
-                const formHTML = `
-                    <form style="margin: 2rem 0;" onsubmit="return false;">
-                        <div class="form-group">
-                            <label for="age">Age Range</label>
-                            <select id="age" required>
-                                <option value="">Select your age range</option>
-                                <option value="6-12">6-12 years</option>
-                                <option value="13-17">13-17 years</option>
-                                <option value="18-25">18-25 years</option>
-                                <option value="26-40">26-40 years</option>
-                                <option value="41-55">41-55 years</option>
-                                <option value="55+">55+ years</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="state">State</label>
-                            <select id="state" required>
-                                <option value="">Select your state</option>
-                                <option value="AZ">Arizona</option>
-                                <option value="CA">California</option>
-                                <option value="CO">Colorado</option>
-                                <option value="FL">Florida</option>
-                                <option value="IL">Illinois</option>
-                                <option value="MA">Massachusetts</option>
-                                <option value="NY">New York</option>
-                                <option value="PA">Pennsylvania</option>
-                                <option value="TX">Texas</option>
-                                <option value="WA">Washington</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" placeholder="your@email.com" required>
-                        </div>
-                    </form>
-                `;
-                const startBtn = introContent.querySelector('button');
-                startBtn.parentElement.insertBefore(document.createElement('div'), startBtn);
-                startBtn.parentElement.firstChild.innerHTML = formHTML;
-            }
-        });
     </script>
 </body>
 </html>
