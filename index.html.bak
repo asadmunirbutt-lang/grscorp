@@ -664,9 +664,6 @@ footer { background: var(--blue-dark); color: rgba(255,255,255,0.75); padding: 6
     <li><a href="#programs">Programs</a></li>
     <li><a href="#initiatives">Initiatives</a></li>
     <li><a href="#team">Our Team</a></li>
-    <li><a href="/about.html">About</a></li>
-    <li><a href="/programs.html">Programs</a></li>
-    <li><a href="/contact.html">Contact</a></li>
     <li><a href="#blogs">Blog</a></li>
     <li><a href="https://grscorp.us/volunteer/" target="_blank">Volunteer</a></li>
     <li><a href="https://www.paypal.com/donate/?hosted_button_id=JWDEJU6LHXD24" target="_blank" rel="noopener" class="nav-cta">Donate</a></li>
@@ -678,9 +675,6 @@ footer { background: var(--blue-dark); color: rgba(255,255,255,0.75); padding: 6
 
 <div class="mobile-menu" id="mobileMenu" role="menu">
   <a href="#about">About Us</a>
-  <a href="/about.html">About</a>
-  <a href="/programs.html">Programs</a>
-  <a href="/contact.html">Contact</a>
   <a href="#programs">Programs</a>
   <a href="#initiatives">Initiatives</a>
   <a href="#team">Our Team</a>
@@ -893,8 +887,8 @@ footer { background: var(--blue-dark); color: rgba(255,255,255,0.75); padding: 6
         <div class="blog-card-top" style="background:linear-gradient(90deg,#0d9488,#1a4d8f);"></div>
         <div class="blog-card-body">
           <div class="blog-tag">Autism Awareness</div>
-          <a href="/posts/how-to-get-autism-evaluation.html" target="_blank">
-            <h3>How to Get Your Child Evaluated for Autism</h3>
+          <a href="https://grscorp.us/making-a-difference-autism-awareness-month/" target="_blank">
+            <h3>Making a Difference: Autism Awareness Month</h3>
           </a>
           <div class="blog-date">April 12, 2026</div>
         </div>
@@ -903,8 +897,8 @@ footer { background: var(--blue-dark); color: rgba(255,255,255,0.75); padding: 6
         <div class="blog-card-top" style="background:linear-gradient(90deg,#7c3aed,#1a4d8f);"></div>
         <div class="blog-card-body">
           <div class="blog-tag">Special Education</div>
-          <a href="/posts/autism-iep-guide.html" target="_blank">
-            <h3>Understanding IEPs and School Rights</h3>
+          <a href="https://grscorp.us/shen-septa/" target="_blank">
+            <h3>Join the Shenendehowa SEPTA Interest List: A Community Initiative</h3>
           </a>
           <div class="blog-date">February 20, 2026</div>
         </div>
@@ -913,15 +907,15 @@ footer { background: var(--blue-dark); color: rgba(255,255,255,0.75); padding: 6
         <div class="blog-card-top" style="background:linear-gradient(90deg,#e8a020,#e5533a);"></div>
         <div class="blog-card-body">
           <div class="blog-tag">Autism Support</div>
-          <a href="/posts/signs-of-autism-in-adults.html" target="_blank">
-            <h3>Recognizing Signs of Autism in Adults</h3>
+          <a href="https://grscorp.us/understanding-self-injurious-behavior-sib-in-autism-impact-challenges-and-hope/" target="_blank">
+            <h3>Understanding Self-Injurious Behavior (SIB) in Autism: Impact, Challenges & Hope</h3>
           </a>
           <div class="blog-date">January 13, 2026</div>
         </div>
       </div>
     </div>
     <div style="text-align:center; margin-top:40px;">
-      <a href="/#blogs" target="_blank" style="display:inline-block; border:1.5px solid var(--border); color:var(--text-mid); padding:12px 28px; border-radius:100px; font-size:14px; font-weight:500; transition:all 0.2s;" onmouseover="this.style.borderColor='#1a4d8f';this.style.color='#1a4d8f'" onmouseout="this.style.borderColor='#dde3ec';this.style.color='#3d4f60'">View All 25 Blog Posts →</a>
+      <a href="https://grscorp.us/blogs/" target="_blank" style="display:inline-block; border:1.5px solid var(--border); color:var(--text-mid); padding:12px 28px; border-radius:100px; font-size:14px; font-weight:500; transition:all 0.2s;" onmouseover="this.style.borderColor='#1a4d8f';this.style.color='#1a4d8f'" onmouseout="this.style.borderColor='#dde3ec';this.style.color='#3d4f60'">View All 25 Blog Posts →</a>
     </div>
   </div>
 </section>
@@ -989,7 +983,7 @@ footer { background: var(--blue-dark); color: rgba(255,255,255,0.75); padding: 6
           <li><a href="https://grscorp.us/autism-diagnosis-criteria/" target="_blank">Diagnosis Criteria</a></li>
           <li><a href="https://grscorp.us/medical-conditions-associated-with-autism/" target="_blank">Medical Conditions</a></li>
           <li><a href="/autism-screening-test.html">Free Screening Tool</a></li>
-          <li><a href="/#blogs" target="_blank">All Blog Posts</a></li>
+          <li><a href="https://grscorp.us/blogs/" target="_blank">All Blog Posts</a></li>
         </ul>
       </div>
       <div class="footer-col">
