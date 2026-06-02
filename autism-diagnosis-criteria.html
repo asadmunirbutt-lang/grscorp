@@ -97,8 +97,8 @@
         }
 
         .section {
-            padding: 88px 32px;
-            max-width: 1100px;
+            padding: 60px 32px;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
@@ -109,11 +109,29 @@
             margin-bottom: 24px;
         }
 
+        .section h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.4rem;
+            color: var(--blue);
+            margin-top: 24px;
+            margin-bottom: 12px;
+        }
+
         .section p {
-            font-size: 1.05rem;
+            font-size: 1rem;
             color: var(--text);
-            line-height: 1.7;
+            line-height: 1.8;
             margin-bottom: 16px;
+        }
+
+        .section ul, .section ol {
+            margin-left: 20px;
+            margin-bottom: 16px;
+        }
+
+        .section li {
+            margin-bottom: 8px;
+            color: var(--text);
         }
 
         footer {
@@ -135,6 +153,7 @@
         @media (max-width: 768px) {
             nav { padding: 0 20px; }
             .section { padding: 40px 20px; }
+            .hero h1 { font-size: 2rem; }
         }
     </style>
 </head>
