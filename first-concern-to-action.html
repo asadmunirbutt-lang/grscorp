@@ -6,34 +6,8 @@
     <title>First Concern To Action | GRSCorp</title>
     <meta name="description" content="First Concern To Action - Global Relief and Support Corporation">
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-542W6ZTYH8"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-542W6ZTYH8');    <!-- Google Ads Conversion Tracking -->
-    <script>
-      (function() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const gclid = urlParams.get('gclid');
-        if (gclid && window.gtag) {
-          gtag('config', 'G-542W6ZTYH8', {
-            'allow_google_signals': true,
-            'allow_ad_personalization_signals': true
-          });
-        }
-      })();
-    </script>
-    <!-- Google Ads Conversion Tracking Tag -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1133270985"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-1133270985');
-    </script>
-    </script>
+    
+    
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -211,7 +185,24 @@
             .hero h1 { font-size: 2rem; }
         }
     </style>
-</head>
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-542W6ZTYH8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-542W6ZTYH8');
+    </script>
+
+    <!-- Google Ads Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1133270985"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-1133270985');
+    </script>
+  </head>
 <body>
 
 <nav role="navigation">
@@ -252,7 +243,7 @@
     <p><a href="/privacy-policy.html">Privacy Policy</a></p>
 </footer>
 
-    <!-- Google Ads Conversion Events -->
+    
     <script>
       function trackContactConversion() {
         if (typeof gtag !== 'undefined') {
@@ -298,6 +289,5 @@
           }
         }
       });
-    </script>
 </body>
 </html>
