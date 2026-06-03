@@ -9,7 +9,19 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-542W6ZTYH8');
+      gtag('config', 'G-542W6ZTYH8');    <!-- Google Ads Conversion Tracking -->
+    <script>
+      (function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const gclid = urlParams.get('gclid');
+        if (gclid && window.gtag) {
+          gtag('config', 'G-542W6ZTYH8', {
+            'allow_google_signals': true,
+            'allow_ad_personalization_signals': true
+          });
+        }
+      })();
+    </script>
     </script>
     <meta name="description" content="Contact GRSCorp for information about our autism support programs, advocacy services, and community resources.">
     <meta name="keywords" content="contact GRSCorp, autism support, advocacy, programs, reach out">
@@ -139,5 +151,52 @@
         <p>&copy; 2026 Global Relief and Support Corporation. All rights reserved.</p>
         <p><a href="/privacy-policy.html">Privacy Policy</a> | <a href="/about.html">About</a></p>
     </footer>
+    <!-- Google Ads Conversion Events -->
+    <script>
+      function trackContactConversion() {
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'conversion', {
+            'value': 1.0,
+            'currency': 'USD',
+            'transaction_id': 'contact_' + Date.now()
+          });
+        }
+      }
+
+      function trackDownloadConversion() {
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'file_download', {
+            'file_name': 'resource'
+          });
+        }
+      }
+
+      let scrollTracked = false;
+      window.addEventListener('scroll', function() {
+        if (!scrollTracked && (window.scrollY > window.innerHeight)) {
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'page_engagement', {
+              'engagement_type': 'scroll',
+              'scroll_depth': Math.round((window.scrollY / document.documentElement.scrollHeight) * 100)
+            });
+          }
+          scrollTracked = true;
+        }
+      });
+
+      document.addEventListener('click', function(e) {
+        const link = e.target.closest('a');
+        if (link && link.href && (link.href.startsWith('http') || link.href.startsWith('//'))) {
+          if (!link.href.includes('grscorp.org')) {
+            if (typeof gtag !== 'undefined') {
+              gtag('event', 'click', {
+                'link_url': link.href,
+                'link_text': link.textContent
+              });
+            }
+          }
+        }
+      });
+    </script>
 </body>
 </html>

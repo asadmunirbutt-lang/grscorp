@@ -12,7 +12,19 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-542W6ZTYH8');
+      gtag('config', 'G-542W6ZTYH8');    <!-- Google Ads Conversion Tracking -->
+    <script>
+      (function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const gclid = urlParams.get('gclid');
+        if (gclid && window.gtag) {
+          gtag('config', 'G-542W6ZTYH8', {
+            'allow_google_signals': true,
+            'allow_ad_personalization_signals': true
+          });
+        }
+      })();
+    </script>
     </script>
 <meta name="description" content="GRSCorp is a 501(c)(3) nonprofit empowering individuals with autism and their families through advocacy, education, community programs, and a 101-acre nature preserve in New York.">
 <meta name="keywords" content="autism nonprofit New York, autism support Clifton Park NY, autism advocacy, autism awareness, autism family support, special education support, SEPTA New York, autism nature preserve, GRSCorp, Global Relief and Support Corporation">
@@ -1036,5 +1048,52 @@ document.querySelectorAll('.mobile-menu a').forEach(link => {
 });
 </script>
 
+    <!-- Google Ads Conversion Events -->
+    <script>
+      function trackContactConversion() {
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'conversion', {
+            'value': 1.0,
+            'currency': 'USD',
+            'transaction_id': 'contact_' + Date.now()
+          });
+        }
+      }
+
+      function trackDownloadConversion() {
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'file_download', {
+            'file_name': 'resource'
+          });
+        }
+      }
+
+      let scrollTracked = false;
+      window.addEventListener('scroll', function() {
+        if (!scrollTracked && (window.scrollY > window.innerHeight)) {
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'page_engagement', {
+              'engagement_type': 'scroll',
+              'scroll_depth': Math.round((window.scrollY / document.documentElement.scrollHeight) * 100)
+            });
+          }
+          scrollTracked = true;
+        }
+      });
+
+      document.addEventListener('click', function(e) {
+        const link = e.target.closest('a');
+        if (link && link.href && (link.href.startsWith('http') || link.href.startsWith('//'))) {
+          if (!link.href.includes('grscorp.org')) {
+            if (typeof gtag !== 'undefined') {
+              gtag('event', 'click', {
+                'link_url': link.href,
+                'link_text': link.textContent
+              });
+            }
+          }
+        }
+      });
+    </script>
 </body>
 </html>
