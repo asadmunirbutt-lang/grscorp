@@ -695,6 +695,42 @@ footer { background: var(--blue-dark); color: rgba(255,255,255,0.75); padding: 6
   .team-grid { grid-template-columns: 1fr; }
   .hero-btns { flex-direction: column; align-items: center; }
 }
+
+        /* Custom Autism Ribbon Cursor */
+        html, body {
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect fill="%231e5a96" x="6" y="4" width="4" height="24" rx="2"/><rect fill="%230088cc" x="14" y="4" width="4" height="24" rx="2"/><rect fill="%2300b8d4" x="22" y="4" width="4" height="24" rx="2"/><circle fill="%23666666" cx="16" cy="28" r="2"/></svg>') 16 30, auto;
+        }
+        
+        a, button, input[type="button"], input[type="submit"] {
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect fill="%231e5a96" x="6" y="4" width="4" height="24" rx="2" opacity="0.8"/><rect fill="%230088cc" x="14" y="4" width="4" height="24" rx="2" opacity="0.8"/><rect fill="%2300b8d4" x="22" y="4" width="4" height="24" rx="2" opacity="0.8"/><circle fill="%23666666" cx="16" cy="28" r="2"/></svg>') 16 30, pointer;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .stat-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(30, 90, 150, 0.15);
+        }
+        
+        .stat-card h3 {
+            color: #1e5a96;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
 </style>
     <!-- Google Analytics (GA4) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-542W6ZTYH8"></script>
@@ -754,7 +790,7 @@ footer { background: var(--blue-dark); color: rgba(255,255,255,0.75); padding: 6
 
 <header class="hero" role="banner">
   <div class="hero-inner">
-    <span class="hero-badge">IRS-Approved 501(c)(3) Nonprofit · Founded 2021</span>
+    <span class="hero-badge">IRS-Approved 501(c)(3) Nonprofit · </span>
     <h1>Every Mind Deserves<br>a Chance to <em>Thrive</em></h1>
     <p class="hero-sub">Global Relief and Support Corporation empowers individuals with autism and their families through advocacy, education, community programs, and nature-based initiatives across New York and beyond.</p>
     <div class="hero-btns">
@@ -1024,6 +1060,9 @@ footer { background: var(--blue-dark); color: rgba(255,255,255,0.75); padding: 6
 </section>
 
 <footer role="contentinfo">
+        <div class="footer-nonprofit-badge">
+          <span class="footer-badge">IRS 501(c)(3) · Donations Tax-Deductible</span>
+        </div>
   <div class="footer-inner">
     <div class="footer-top">
       <div>
@@ -1080,7 +1119,121 @@ footer { background: var(--blue-dark); color: rgba(255,255,255,0.75); padding: 6
       </div>
     </div>
   </div>
-</footer>
+
+        <section class="section section-alt" id="impact-stats" aria-labelledby="impact-title">
+            <h2 id="impact-title">Our Impact & Autism Statistics</h2>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Autism Prevalence</h3>
+                    <canvas id="prevalenceChart" style="max-width: 300px;"></canvas>
+                    <p style="font-size: 0.9rem; color: #666666; margin-top: 1rem; text-align: center; font-style: italic;">1 in 36 children diagnosed with autism (CDC 2023)</p>
+                </div>
+                
+                <div class="stat-card">
+                    <h3>Our Reach</h3>
+                    <canvas id="reachChart" style="max-width: 300px;"></canvas>
+                    <p style="font-size: 0.9rem; color: #666666; margin-top: 1rem; text-align: center; font-style: italic;">People reached through education and screening tools</p>
+                </div>
+                
+                <div class="stat-card">
+                    <h3>Age Distribution</h3>
+                    <canvas id="ageChart" style="max-width: 300px;"></canvas>
+                    <p style="font-size: 0.9rem; color: #666666; margin-top: 1rem; text-align: center; font-style: italic;">When autism is typically identified</p>
+                </div>
+            </div>
+        </section>
+        
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+            function initCharts() {
+                const prevalenceCtx = document.getElementById('prevalenceChart');
+                if (prevalenceCtx) {
+                    new Chart(prevalenceCtx, {
+                        type: 'doughnut',
+                        data: {
+                            labels: ['Autism', 'General Population'],
+                            datasets: [{
+                                data: [2.8, 97.2],
+                                backgroundColor: ['#1e5a96', '#e0e6f2'],
+                                borderColor: ['#ffffff', '#ffffff'],
+                                borderWidth: 2
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            plugins: {
+                                legend: {position: 'bottom'}
+                            }
+                        }
+                    });
+                }
+                
+                const reachCtx = document.getElementById('reachChart');
+                if (reachCtx) {
+                    new Chart(reachCtx, {
+                        type: 'bar',
+                        data: {
+                            labels: ['Blog Readers', 'Screening Tests', 'Support Sessions'],
+                            datasets: [{
+                                label: 'Users Reached',
+                                data: [5000, 2500, 1200],
+                                backgroundColor: ['#1e5a96', '#0088cc', '#00b8d4'],
+                                borderColor: ['#ffffff', '#ffffff', '#ffffff'],
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            indexAxis: 'y',
+                            plugins: {
+                                legend: {display: false}
+                            },
+                            scales: {
+                                x: {beginAtZero: true}
+                            }
+                        }
+                    });
+                }
+                
+                const ageCtx = document.getElementById('ageChart');
+                if (ageCtx) {
+                    new Chart(ageCtx, {
+                        type: 'line',
+                        data: {
+                            labels: ['Age 2-4', 'Age 5-8', 'Age 9-12', 'Age 13-18', 'Age 18+'],
+                            datasets: [{
+                                label: 'Percent Diagnosed',
+                                data: [15, 45, 25, 10, 5],
+                                borderColor: '#1e5a96',
+                                backgroundColor: 'rgba(30, 90, 150, 0.1)',
+                                borderWidth: 3,
+                                fill: true,
+                                tension: 0.4,
+                                pointBackgroundColor: '#1e5a96',
+                                pointBorderColor: '#ffffff',
+                                pointBorderWidth: 2,
+                                pointRadius: 6,
+                                pointHoverRadius: 8
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            plugins: {legend: {display: false}},
+                            scales: {y: {beginAtZero: true, max: 50}}
+                        }
+                    });
+                }
+            }
+            
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initCharts);
+            } else {
+                initCharts();
+            }
+        </script>
+
+    </footer>
 
 <script>
 function toggleMenu() {
