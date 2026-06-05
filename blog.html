@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -316,7 +316,7 @@
 
     <div class="container">
         <div class="back-link">
-            <a href="/">← Back to Home</a>
+            <a href="/">â† Back to Home</a>
         </div>
 
         <div class="blog-header">
@@ -390,5 +390,44 @@
                 }
             });
         </script>
-</body>
+        <script>
+            const blogSlugs = ["10-best-sensory-toys-for-individuals-with-autism","101-acres-nature-preserve-for-individuals-with-autism","11-must-read-books-about-autism-for-parents-and-carers","a-heartwarming-journey-azlans-first-independent-haircut-with-michelle-help","a-pioneering-partnership","adult-autism-signs","all-about-autism-understanding-the-spectrum","anxiety-and-autism-managing-worry-and-stress","anxiety-in-autism-understanding-the-connection","applied-behavior-analysis-aba-for-autism","autism-and-employment-building-a-successful-career","autism-is-a-gift","autism-prevalence-how-common-is-autism","autism-screening-test","autism-spectrum-understanding-the-spectrum","background","behavior-intervention-for-autism","bullying-and-autism-addressing-harassment-and-exclusion","communication-and-autism-finding-your-voice","core-values","depression-and-autism-addressing-mental-health","early-intervention-for-autism-getting-started-early","employment-and-autism-building-a-career","family-support-for-autism","first-concern-to-action","goals","how-to-get-autism-evaluation","how-to-support-autistic-individuals","identity-and-autism-embracing-neurodiversity","inclusive-education-for-autistic-students","learn-the-sign-of-autism","masking-and-autism-the-hidden-cost-of-fitting-in","medical-conditions-associated-with-autism","mental-health-and-autism-addressing-psychological-well-being","music-therapy-for-autism-the-healing-power-of-sound","neurodiversity-in-the-workplace","occupational-therapy-for-autism","parenting-an-autistic-child-tips-for-success","purpose","relationships-and-autism-building-meaningful-connections","school-accommodations-for-autism","self-advocacy-for-autistic-individuals","sensory-issues","signs-of-autism-in-adults","signs-of-autism-in-children","social-skills-for-autistic-individuals","speech-therapy-for-autism","stress-management-for-autistic-individuals","supporting-your-child-with-autism","technology-and-autism-assistive-devices","training-services","understanding-autism-spectrum-disorder","what-causes-autism","what-is-autism"];
+
+            function loadBlogs() {
+                const container = document.querySelector('.blog-grid');
+                if (!container) return;
+                container.innerHTML = '';
+                blogSlugs.forEach(slug => {
+                    const card = document.createElement('a');
+                    card.href = '/posts/' + slug;
+                    card.className = 'blog-card';
+                    card.innerHTML = '<div class="blog-card-header"></div><div class="blog-card-body"><h3 class="blog-card-title">' + slug.replace(/-/g, ' ') + '</h3></div>';
+                    container.appendChild(card);
+                });
+            }
+
+            const searchInput = document.querySelector('.search-box input');
+            if (searchInput) {
+                searchInput.addEventListener('input', function(e) {
+                    const term = e.target.value.toLowerCase();
+                    const filtered = blogSlugs.filter(s => s.toLowerCase().includes(term));
+                    const container = document.querySelector('.blog-grid');
+                    container.innerHTML = '';
+                    filtered.forEach(slug => {
+                        const card = document.createElement('a');
+                        card.href = '/posts/' + slug;
+                        card.className = 'blog-card';
+                        card.innerHTML = '<div class="blog-card-header"></div><div class="blog-card-body"><h3 class="blog-card-title">' + slug.replace(/-/g, ' ') + '</h3></div>';
+                        container.appendChild(card);
+                    });
+                });
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', loadBlogs);
+            } else {
+                loadBlogs();
+            }
+        </script></body>
 </html>
+
