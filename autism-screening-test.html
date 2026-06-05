@@ -573,7 +573,39 @@
             background: var(--border-light);
             border-radius: 3px;
         }
-    </style>
+    
+        @media (max-width: 768px) {
+            body {
+                padding: 0.5rem;
+            }
+            .container {
+                max-width: 95%;
+                border-radius: 12px;
+            }
+            .section {
+                padding: 1rem;
+            }
+            .header {
+                padding: 1.2rem;
+            }
+            .header h1 {
+                font-size: 1.2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 0.25rem;
+            }
+            .container {
+                max-width: 100%;
+                border-radius: 8px;
+            }
+            .section {
+                padding: 0.75rem;
+            }
+        }
+</style>
     <!-- Google Analytics (GA4) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-542W6ZTYH8"></script>
     <script>
