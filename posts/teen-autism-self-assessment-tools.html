@@ -135,9 +135,9 @@
 			<div class="elementor-widget-wrap elementor-element-populated">
 						<div class="elementor-element elementor-element-23c9f95d elementor-widget elementor-widget-text-editor" data-id="23c9f95d" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
-									&nbsp;
-
-<style>
+									&nbsp;
+
+<style>
     body {
       font-family: Arial, sans-serif;
       margin: 20px;
@@ -160,192 +160,192 @@
       font-size: 18px;
       margin-top: 20px;
     }
-  </style>
-
-<script>
-    function calculateScore() {
-      let totalScore = 0;
-
-      // Calculate the teenager's score
-      for (let i = 1; i <= 10; i++) {
-        const teenagerAnswer = document.getElementById(`teenager-q${i}`).value;
-        totalScore += parseInt(teenagerAnswer);
-      }
-
-      // Calculate the trusted adult's score
-      for (let i = 1; i <= 10; i++) {
-        const adultAnswer = document.getElementById(`adult-q${i}`).value;
-        totalScore += parseInt(adultAnswer);
-      }
-
-      // Display the total score
-      document.getElementById('total-score').textContent = `Total Score: ${totalScore}`;
-    }
-  </script>
-<h1></h1>
-<h2>Introduction</h2>
-Autism, or Autism Spectrum Disorder (ASD), is a complex neurological condition that affects individuals in various ways. While symptoms can manifest differently from person to person, early diagnosis and intervention can make a significant difference in the lives of those with autism. In this blog post, we will be discussing a self-assessment tool designed to help parents and teenagers gain a better understanding of autism in adolescents.
-<h2>Understanding Autism in Teens</h2>
-Autism is a lifelong condition that is typically diagnosed in early childhood. However, some individuals may not receive a formal diagnosis until their teenage years. Understanding the signs and symptoms of autism in teens can be challenging, as many behaviors can overlap with typical adolescence. This self-assessment tool can provide valuable insights and help initiate conversations about autism in teenagers.
-<h2>The Self-Assessment Tool</h2>
-This self-assessment tool is not a substitute for a professional diagnosis but can serve as a helpful resource to identify potential signs of autism in teens. It is designed to be completed collaboratively by both the teenager and a trusted adult, such as a parent, guardian, or teacher.
-<h3>Teenager's Self-Assessment:</h3>
-<form>
-<ol><!-- Teenager's questions -->
- 	<li class="question">Do you find social situations confusing or challenging?
-<select id="teenager-q1">
-<option value="0">Not at all</option>
-<option value="1">A little</option>
-<option value="2">Somewhat</option>
-<option value="3">Quite a bit</option>
-<option value="4">Very much</option>
-</select></li>
- 	<li class="question"> Are you often told that you have intense interests or obsessions that you can't seem to shake?
-<select id="teenager-q2">
-<option value="0">No</option>
-<option value="4">Yes</option>
-</select></li>
- 	<li class="question"> Do you prefer routines and get upset when they are disrupted?
-<select id="teenager-q3">
-<option value="0">No</option>
-<option value="4">Yes</option>
-</select></li>
- 	<li class="question"> Is maintaining eye contact during conversations difficult for you?
-<select id="teenager-q4">
-<option value="0">No</option>
-<option value="4">Yes</option>
-</select></li>
- 	<li class="question"> Do you have strong sensitivities to certain textures, sounds, or smells?
-<select id="teenager-q5">
-<option value="0">No</option>
-<option value="4">Yes</option>
-</select></li>
- 	<li class="question"> Are you comfortable with non-literal language, like sarcasm or idioms?
-<select id="teenager-q6">
-<option value="0">No</option>
-<option value="4">Yes</option>
-</select></li>
- 	<li class="question"> Do you sometimes struggle to understand other people's emotions or social cues?
-<select id="teenager-q7">
-<option value="0">No</option>
-<option value="4">Yes</option>
-</select></li>
- 	<li class="question"> Are you averse to physical touch or overly sensitive to it?
-<select id="teenager-q8">
-<option value="0">No</option>
-<option value="4">Yes</option>
-</select></li>
- 	<li class="question"> Do you engage in repetitive behaviors, like hand-flapping, pacing, or repetitive speech?
-<select id="teenager-q9">
-<option value="0">No</option>
-<option value="4">Yes</option>
-</select></li>
- 	<li class="question"> Do you have difficulties in making and keeping friends?
-<select id="teenager-q10">
-<option value="0">No</option>
-<option value="4">Yes</option>
-</select></li>
-</ol>
-<h3>Trusted Adult's Observations:</h3>
-<!-- Trusted adult's observations -->
-
-Does the teenager struggle with maintaining eye contact during conversations?
-
-<select id="adult-q1">
-<option value="0">No</option>
-<option value="4">Yes</option>
-</select>Have you noticed any sensory sensitivities, such as a strong aversion to certain textures, sounds, or smells?
-
-<select id="adult-q2">
-<option value="0">No</option>
-<option value="4">Yes</option>
-</select> Do they have difficulty understanding sarcasm or non-literal language?
-
-<select id="adult-q3">
-<option value="0">No</option>
-<option value="4">Yes</option>
-</select>Have you observed challenges in their social interactions or making and keeping friends?
-
-<select id="adult-q4">
-<option value="0">No</option>
-<option value="4">Yes</option>
-</select> Do they have intense interests or obsessions that seem unusual or intense?
-
-<select id="adult-q5">
-<option value="0">No</option>
-<option value="4">Yes</option>
-</select> Have you noticed any repetitive behaviors or movements?
-
-<select id="adult-q6">
-<option value="0">No</option>
-<option value="4">Yes</option>
-</select> Do they prefer routines and get upset when they are disrupted?
-
-<select id="adult-q7">
-<option value="0">No</option>
-<option value="4">Yes</option>
-</select> Are they averse to physical touch or sensitive to it?
-
-<select id="adult-q8">
-<option value="0">No</option>
-<option value="4">Yes</option>
-</select> Do they exhibit emotional or behavioral responses that seem atypical in certain situations?
-
-<select id="adult-q9">
-<option value="0">No</option>
-<option value="4">Yes</option>
-</select>. Have you observed any difficulties in their verbal or non-verbal communication?
-
-<select id="adult-q10">
-<option value="0">No</option>
-<option value="4">Yes</option>
-</select>
-
-<button type="button">Calculate Score</button>
-
-</form>
-<div id="total-score"></div>
-<h2>Scoring and Interpretation:</h2>
-After completing the self-assessment, calculate the total score for each respondent. You can do this by adding up the scores for each question.
-<ul>
- 	<li>A total score of 0-10 suggests minimal concerns.</li>
- 	<li>A total score of 11-20 may indicate mild concerns.</li>
- 	<li>A total score of 21-30 suggests moderate concerns.</li>
- 	<li>A total score of 31-40 may indicate significant concerns.</li>
-</ul>
-If there is a notable difference in scores between the teenager's self-assessment and the trusted adult's observations or if the total score indicates significant concerns, it is advisable to seek a professional evaluation from a healthcare provider, psychologist, or autism specialist. This quantifiable self-assessment can provide a clearer indication of potential issues related to autism in teenagers.
-<h2>What to Do Next</h2>
-If the self-assessment tool suggests the possibility of autism, it's essential to consult with a healthcare professional or a specialist experienced in diagnosing autism. A formal diagnosis is crucial to access appropriate support and services.
-<h2>Conclusion</h2>
-Understanding autism in teens is a crucial step in ensuring they receive the support and resources they need. While the self-assessment tool can provide valuable insights, remember that it's not a replacement for a professional diagnosis. Always seek guidance from a healthcare provider or specialist for an accurate assessment and to create a tailored plan to support teenagers with autism. Early intervention and support can make a significant difference in the lives of adolescents on the autism spectrum.
-
-&nbsp;
-
-<!-- Your existing blog content here -->
-
-<!-- Contact Button -->
-<a class="contact-button" href="https://grscorp.us/contacts/" target="_blank" rel="noopener">Contact Us</a>
-
-<!-- More Blogs Button -->
-<a class="more-blogs-button" href="https://grscorp.us/blogs/" target="_blank" rel="noopener">More Blogs</a>
-
-<!-- Volunteer Button -->
-<a class="volunteer-button" href="https://grscorp.us/volunteer/" target="_blank" rel="noopener">Volunteer</a>
-
-<style>
-  /* Style for all the buttons */
-  .contact-button,
-  .more-blogs-button,
-  .volunteer-button {
-    display: inline-block;
-    background-color: #0077B6; /* Smooth blue color */
-    color: white; /* Change text color to white */
-    padding: 10px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-right: 10px;
-  }
-</style>
+  </style>
+
+<script>
+    function calculateScore() {
+      let totalScore = 0;
+
+      // Calculate the teenager's score
+      for (let i = 1; i <= 10; i++) {
+        const teenagerAnswer = document.getElementById(`teenager-q${i}`).value;
+        totalScore += parseInt(teenagerAnswer);
+      }
+
+      // Calculate the trusted adult's score
+      for (let i = 1; i <= 10; i++) {
+        const adultAnswer = document.getElementById(`adult-q${i}`).value;
+        totalScore += parseInt(adultAnswer);
+      }
+
+      // Display the total score
+      document.getElementById('total-score').textContent = `Total Score: ${totalScore}`;
+    }
+  </script>
+<h1></h1>
+<h2>Introduction</h2>
+Autism, or Autism Spectrum Disorder (ASD), is a complex neurological condition that affects individuals in various ways. While symptoms can manifest differently from person to person, early diagnosis and intervention can make a significant difference in the lives of those with autism. In this blog post, we will be discussing a self-assessment tool designed to help parents and teenagers gain a better understanding of autism in adolescents.
+<h2>Understanding Autism in Teens</h2>
+Autism is a lifelong condition that is typically diagnosed in early childhood. However, some individuals may not receive a formal diagnosis until their teenage years. Understanding the signs and symptoms of autism in teens can be challenging, as many behaviors can overlap with typical adolescence. This self-assessment tool can provide valuable insights and help initiate conversations about autism in teenagers.
+<h2>The Self-Assessment Tool</h2>
+This self-assessment tool is not a substitute for a professional diagnosis but can serve as a helpful resource to identify potential signs of autism in teens. It is designed to be completed collaboratively by both the teenager and a trusted adult, such as a parent, guardian, or teacher.
+<h3>Teenager's Self-Assessment:</h3>
+<form>
+<ol><!-- Teenager's questions -->
+ 	<li class="question">Do you find social situations confusing or challenging?
+<select id="teenager-q1">
+<option value="0">Not at all</option>
+<option value="1">A little</option>
+<option value="2">Somewhat</option>
+<option value="3">Quite a bit</option>
+<option value="4">Very much</option>
+</select></li>
+ 	<li class="question"> Are you often told that you have intense interests or obsessions that you can't seem to shake?
+<select id="teenager-q2">
+<option value="0">No</option>
+<option value="4">Yes</option>
+</select></li>
+ 	<li class="question"> Do you prefer routines and get upset when they are disrupted?
+<select id="teenager-q3">
+<option value="0">No</option>
+<option value="4">Yes</option>
+</select></li>
+ 	<li class="question"> Is maintaining eye contact during conversations difficult for you?
+<select id="teenager-q4">
+<option value="0">No</option>
+<option value="4">Yes</option>
+</select></li>
+ 	<li class="question"> Do you have strong sensitivities to certain textures, sounds, or smells?
+<select id="teenager-q5">
+<option value="0">No</option>
+<option value="4">Yes</option>
+</select></li>
+ 	<li class="question"> Are you comfortable with non-literal language, like sarcasm or idioms?
+<select id="teenager-q6">
+<option value="0">No</option>
+<option value="4">Yes</option>
+</select></li>
+ 	<li class="question"> Do you sometimes struggle to understand other people's emotions or social cues?
+<select id="teenager-q7">
+<option value="0">No</option>
+<option value="4">Yes</option>
+</select></li>
+ 	<li class="question"> Are you averse to physical touch or overly sensitive to it?
+<select id="teenager-q8">
+<option value="0">No</option>
+<option value="4">Yes</option>
+</select></li>
+ 	<li class="question"> Do you engage in repetitive behaviors, like hand-flapping, pacing, or repetitive speech?
+<select id="teenager-q9">
+<option value="0">No</option>
+<option value="4">Yes</option>
+</select></li>
+ 	<li class="question"> Do you have difficulties in making and keeping friends?
+<select id="teenager-q10">
+<option value="0">No</option>
+<option value="4">Yes</option>
+</select></li>
+</ol>
+<h3>Trusted Adult's Observations:</h3>
+<!-- Trusted adult's observations -->
+
+Does the teenager struggle with maintaining eye contact during conversations?
+
+<select id="adult-q1">
+<option value="0">No</option>
+<option value="4">Yes</option>
+</select>Have you noticed any sensory sensitivities, such as a strong aversion to certain textures, sounds, or smells?
+
+<select id="adult-q2">
+<option value="0">No</option>
+<option value="4">Yes</option>
+</select> Do they have difficulty understanding sarcasm or non-literal language?
+
+<select id="adult-q3">
+<option value="0">No</option>
+<option value="4">Yes</option>
+</select>Have you observed challenges in their social interactions or making and keeping friends?
+
+<select id="adult-q4">
+<option value="0">No</option>
+<option value="4">Yes</option>
+</select> Do they have intense interests or obsessions that seem unusual or intense?
+
+<select id="adult-q5">
+<option value="0">No</option>
+<option value="4">Yes</option>
+</select> Have you noticed any repetitive behaviors or movements?
+
+<select id="adult-q6">
+<option value="0">No</option>
+<option value="4">Yes</option>
+</select> Do they prefer routines and get upset when they are disrupted?
+
+<select id="adult-q7">
+<option value="0">No</option>
+<option value="4">Yes</option>
+</select> Are they averse to physical touch or sensitive to it?
+
+<select id="adult-q8">
+<option value="0">No</option>
+<option value="4">Yes</option>
+</select> Do they exhibit emotional or behavioral responses that seem atypical in certain situations?
+
+<select id="adult-q9">
+<option value="0">No</option>
+<option value="4">Yes</option>
+</select>. Have you observed any difficulties in their verbal or non-verbal communication?
+
+<select id="adult-q10">
+<option value="0">No</option>
+<option value="4">Yes</option>
+</select>
+
+<button type="button">Calculate Score</button>
+
+</form>
+<div id="total-score"></div>
+<h2>Scoring and Interpretation:</h2>
+After completing the self-assessment, calculate the total score for each respondent. You can do this by adding up the scores for each question.
+<ul>
+ 	<li>A total score of 0-10 suggests minimal concerns.</li>
+ 	<li>A total score of 11-20 may indicate mild concerns.</li>
+ 	<li>A total score of 21-30 suggests moderate concerns.</li>
+ 	<li>A total score of 31-40 may indicate significant concerns.</li>
+</ul>
+If there is a notable difference in scores between the teenager's self-assessment and the trusted adult's observations or if the total score indicates significant concerns, it is advisable to seek a professional evaluation from a healthcare provider, psychologist, or autism specialist. This quantifiable self-assessment can provide a clearer indication of potential issues related to autism in teenagers.
+<h2>What to Do Next</h2>
+If the self-assessment tool suggests the possibility of autism, it's essential to consult with a healthcare professional or a specialist experienced in diagnosing autism. A formal diagnosis is crucial to access appropriate support and services.
+<h2>Conclusion</h2>
+Understanding autism in teens is a crucial step in ensuring they receive the support and resources they need. While the self-assessment tool can provide valuable insights, remember that it's not a replacement for a professional diagnosis. Always seek guidance from a healthcare provider or specialist for an accurate assessment and to create a tailored plan to support teenagers with autism. Early intervention and support can make a significant difference in the lives of adolescents on the autism spectrum.
+
+&nbsp;
+
+<!-- Your existing blog content here -->
+
+<!-- Contact Button -->
+<a class="contact-button" href="https://grscorp.us/contacts/" target="_blank" rel="noopener">Contact Us</a>
+
+<!-- More Blogs Button -->
+<a class="more-blogs-button" href="https://grscorp.us/blogs/" target="_blank" rel="noopener">More Blogs</a>
+
+<!-- Volunteer Button -->
+<a class="volunteer-button" href="https://grscorp.us/volunteer/" target="_blank" rel="noopener">Volunteer</a>
+
+<style>
+  /* Style for all the buttons */
+  .contact-button,
+  .more-blogs-button,
+  .volunteer-button {
+    display: inline-block;
+    background-color: #0077B6; /* Smooth blue color */
+    color: white; /* Change text color to white */
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+</style>
 								</div>
 				</div>
 					</div>
