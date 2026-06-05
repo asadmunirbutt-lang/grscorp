@@ -790,7 +790,6 @@ footer { background: var(--blue-dark); color: rgba(255,255,255,0.75); padding: 6
 
 <header class="hero" role="banner">
   <div class="hero-inner">
-    <span class="hero-badge">IRS-Approved 501(c)(3) Nonprofit · </span>
     <h1>Every Mind Deserves<br>a Chance to <em>Thrive</em></h1>
     <p class="hero-sub">Global Relief and Support Corporation empowers individuals with autism and their families through advocacy, education, community programs, and nature-based initiatives across New York and beyond.</p>
     <div class="hero-btns">
@@ -1061,14 +1060,14 @@ footer { background: var(--blue-dark); color: rgba(255,255,255,0.75); padding: 6
 
 <footer role="contentinfo">
         <div class="footer-nonprofit-badge">
-          <span class="footer-badge">IRS 501(c)(3) · Donations Tax-Deductible</span>
+          <span class="footer-badge">IRS 501(c)(3)</span>
         </div>
   <div class="footer-inner">
     <div class="footer-top">
       <div>
         <div class="footer-brand-name">Global Relief and Support Corporation</div>
         <p class="footer-brand-desc">Empowering individuals with autism and their families through advocacy, education, community programs, and nature-based initiatives. Based in Clifton Park, NY, serving families across New York State and beyond.</p>
-        <span class="footer-badge">IRS 501(c)(3) · Donations Tax-Deductible</span>
+        <span class="footer-badge">IRS 501(c)(3)</span>
       </div>
       <div class="footer-col">
         <h4>About</h4>
@@ -1297,5 +1296,51 @@ document.querySelectorAll('.mobile-menu a').forEach(link => {
           }
         }
       });
+
+        <!-- Dynamic Autism Ribbon Cursor -->
+        <script>
+            // Create cursor element
+            const cursor = document.createElement('div');
+            cursor.id = 'autism-ribbon-cursor';
+            cursor.style.cssText = `
+                position: fixed;
+                width: 32px;
+                height: 32px;
+                pointer-events: none;
+                z-index: 9999;
+                display: none;
+            `;
+            cursor.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                <rect fill="#1e5a96" x="6" y="4" width="4" height="24" rx="2"/>
+                <rect fill="#0088cc" x="14" y="4" width="4" height="24" rx="2"/>
+                <rect fill="#00b8d4" x="22" y="4" width="4" height="24" rx="2"/>
+                <circle fill="#666666" cx="16" cy="28" r="2"/>
+            </svg>`;
+            document.body.appendChild(cursor);
+            
+            // Track mouse position
+            let mouseX = 0, mouseY = 0;
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+                cursor.style.left = (mouseX - 16) + 'px';
+                cursor.style.top = (mouseY - 16) + 'px';
+                cursor.style.display = 'block';
+            });
+            
+            // Hide cursor when mouse leaves window
+            document.addEventListener('mouseleave', () => {
+                cursor.style.display = 'none';
+            });
+            
+            // Hide system cursor
+            document.body.style.cursor = 'none';
+        </script>
+        
+        <style>
+            a, button, input[type="button"], input[type="submit"] {
+                cursor: none;
+            }
+        </style>
 </body>
 </html>
