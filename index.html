@@ -696,14 +696,7 @@ footer { background: var(--blue-dark); color: rgba(255,255,255,0.75); padding: 6
   .hero-btns { flex-direction: column; align-items: center; }
 }
 
-        /* Custom Autism Ribbon Cursor */
-        html, body {
-            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect fill="%231e5a96" x="6" y="4" width="4" height="24" rx="2"/><rect fill="%230088cc" x="14" y="4" width="4" height="24" rx="2"/><rect fill="%2300b8d4" x="22" y="4" width="4" height="24" rx="2"/><circle fill="%23666666" cx="16" cy="28" r="2"/></svg>') 16 30, auto;
-        }
-        
-        a, button, input[type="button"], input[type="submit"] {
-            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect fill="%231e5a96" x="6" y="4" width="4" height="24" rx="2" opacity="0.8"/><rect fill="%230088cc" x="14" y="4" width="4" height="24" rx="2" opacity="0.8"/><rect fill="%2300b8d4" x="22" y="4" width="4" height="24" rx="2" opacity="0.8"/><circle fill="%23666666" cx="16" cy="28" r="2"/></svg>') 16 30, pointer;
-        }
+
         
         .stats-grid {
             display: grid;
@@ -1297,49 +1290,47 @@ document.querySelectorAll('.mobile-menu a').forEach(link => {
         }
       });
 
-        <!-- Dynamic Autism Ribbon Cursor -->
+
+
+        <!-- Ripple Click Effect -->
         <script>
-            // Create cursor element
-            const cursor = document.createElement('div');
-            cursor.id = 'autism-ribbon-cursor';
-            cursor.style.cssText = `
-                position: fixed;
-                width: 32px;
-                height: 32px;
-                pointer-events: none;
-                z-index: 9999;
-                display: none;
-            `;
-            cursor.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-                <rect fill="#1e5a96" x="6" y="4" width="4" height="24" rx="2"/>
-                <rect fill="#0088cc" x="14" y="4" width="4" height="24" rx="2"/>
-                <rect fill="#00b8d4" x="22" y="4" width="4" height="24" rx="2"/>
-                <circle fill="#666666" cx="16" cy="28" r="2"/>
-            </svg>`;
-            document.body.appendChild(cursor);
-            
-            // Track mouse position
-            let mouseX = 0, mouseY = 0;
-            document.addEventListener('mousemove', (e) => {
-                mouseX = e.clientX;
-                mouseY = e.clientY;
-                cursor.style.left = (mouseX - 16) + 'px';
-                cursor.style.top = (mouseY - 16) + 'px';
-                cursor.style.display = 'block';
+            // Add ripple effect on click
+            document.addEventListener('click', function(e) {
+                const ripple = document.createElement('div');
+                ripple.className = 'ripple';
+                ripple.style.left = e.clientX + 'px';
+                ripple.style.top = e.clientY + 'px';
+                document.body.appendChild(ripple);
+                
+                // Remove ripple after animation
+                setTimeout(() => ripple.remove(), 600);
             });
-            
-            // Hide cursor when mouse leaves window
-            document.addEventListener('mouseleave', () => {
-                cursor.style.display = 'none';
-            });
-            
-            // Hide system cursor
-            document.body.style.cursor = 'none';
         </script>
         
         <style>
-            a, button, input[type="button"], input[type="submit"] {
-                cursor: none;
+            .ripple {
+                position: fixed;
+                width: 20px;
+                height: 20px;
+                background: radial-gradient(circle, rgba(30, 90, 150, 0.6) 0%, transparent 70%);
+                border-radius: 50%;
+                transform: translate(-50%, -50%);
+                pointer-events: none;
+                z-index: 9999;
+                animation: ripple-animation 0.6s ease-out;
+            }
+            
+            @keyframes ripple-animation {
+                from {
+                    width: 20px;
+                    height: 20px;
+                    opacity: 1;
+                }
+                to {
+                    width: 100px;
+                    height: 100px;
+                    opacity: 0;
+                }
             }
         </style>
 </body>
