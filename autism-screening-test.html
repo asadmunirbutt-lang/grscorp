@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -266,7 +266,7 @@
             border-color: var(--accent-blue);
         }
         .option input[type="radio"]:checked + label .option-radio::after {
-            content: '✓';
+            content: 'âœ“';
             color: white;
             font-weight: bold;
             font-size: 0.8rem;
@@ -639,10 +639,10 @@
                     <strong>Important:</strong> This tool is a screening questionnaire, not a diagnostic assessment. Only a qualified healthcare professional can provide an autism diagnosis.
                 </div>
                 <h2 style="margin-top: 1.5rem; font-size: 1.1rem;">What to Expect</h2>
-                <p>• You'll answer 10 questions about traits commonly associated with autism</p>
-                <p>• Takes about 5-10 minutes to complete</p>
-                <p>• Get a screening score and personalized recommendations</p>
-                <p>• Find evaluation resources in your area</p>
+                <p>â€¢ You'll answer 10 questions about traits commonly associated with autism</p>
+                <p>â€¢ Takes about 5-10 minutes to complete</p>
+                <p>â€¢ Get a screening score and personalized recommendations</p>
+                <p>â€¢ Find evaluation resources in your area</p>
                 <div class="info-box" style="border-left-color: #00a86b; background: linear-gradient(135deg, rgba(0, 168, 107, 0.1) 0%, rgba(0, 168, 107, 0.05) 100%);">
                     <strong style="color: #00a86b;">Privacy:</strong> Your information is used only for resources. We don't sell or share your data.
                 </div>
@@ -693,8 +693,8 @@
             
             
             <div class="button-group">
-                <button class="btn-secondary" id="prevBtn" onclick="previousQuestion()" style="display: none;">← Previous</button>
-                <button class="btn-primary" id="nextBtn" onclick="nextQuestion()">Next →</button>
+                <button class="btn-secondary" id="prevBtn" onclick="previousQuestion()" style="display: none;">â† Previous</button>
+                <button class="btn-primary" id="nextBtn" onclick="nextQuestion()">Next â†’</button>
             </div>
         </div>
 
@@ -711,16 +711,16 @@
                 </div>
                 
                 <div class="share-section">
-                    <h3>📤 Share Your Results</h3>
+                    <h3>ðŸ“¤ Share Your Results</h3>
                     <p style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 1rem;">Share your screening results with friends, family, or healthcare providers.</p>
                     <div class="share-buttons">
-                        <button class="share-btn share-btn-email" onclick="emailResults()">📧 Email Results</button>
-                        <button class="share-btn share-btn-copy" onclick="copyResultsLink()">📋 Copy Link</button>
-                        <button class="share-btn share-btn-facebook" onclick="shareToFacebook()">👥 Facebook</button>
-                        <button class="share-btn share-btn-twitter" onclick="shareToTwitter()">𝕏 Twitter</button>
+                        <button class="share-btn share-btn-email" onclick="emailResults()">ðŸ“§ Email Results</button>
+                        <button class="share-btn share-btn-copy" onclick="copyResultsLink()">ðŸ“‹ Copy Link</button>
+                        <button class="share-btn share-btn-facebook" onclick="shareToFacebook()">ðŸ‘¥ Facebook</button>
+                        <button class="share-btn share-btn-twitter" onclick="shareToTwitter()">ð• Twitter</button>
                     </div>
                     <div class="share-test-section">
-                        <p><strong>💬 Share This Test With Others</strong></p>
+                        <p><strong>ðŸ’¬ Share This Test With Others</strong></p>
                         <p style="color: var(--text-gray); font-size: 0.85rem;">Invite friends and family to take the autism screening tool. The more people who understand themselves, the better.</p>
                         <div class="share-test-buttons">
                             <button class="share-btn share-btn-copy" onclick="shareTestLink()" style="flex: 1;">Copy Test Link</button>
@@ -735,7 +735,7 @@
         </div>
 
         <div class="footer">
-            <p>© 2026 GRSCorp. This tool is for educational purposes only. <a href="/">Home</a></p>
+            <p>Â© 2026 GRSCorp. This tool is for educational purposes only. <a href="/">Home</a></p>
         </div>
     </div>
 
@@ -925,7 +925,7 @@
             document.getElementById('progressFill').style.width = progress + '%';
             document.getElementById('questionCounter').textContent = `Question ${index + 1} of ${questions.length}`;
             document.getElementById('prevBtn').style.display = index > 0 ? 'block' : 'none';
-            document.getElementById('nextBtn').textContent = index === questions.length - 1 ? 'See Results' : 'Next →';
+            document.getElementById('nextBtn').textContent = index === questions.length - 1 ? 'See Results' : 'Next â†’';
         }
 
         function nextQuestion() {
@@ -995,11 +995,11 @@
                         <div class="professional-title">${p.title}</div>
                         <div class="professional-info">
                             <strong>${p.specialty}</strong><br>
-                            📍 ${p.city}, ${p.state}<br>
-                            ${p.accepts_telehealth ? '💻 Telehealth available' : ''}
+                            ðŸ“ ${p.city}, ${p.state}<br>
+                            ${p.accepts_telehealth ? 'ðŸ’» Telehealth available' : ''}
                         </div>
                         <div class="professional-contact" style="margin-top: 0.5rem;">
-                            📞 <a href="tel:${p.phone}">${p.phone}</a>
+                            ðŸ“ž <a href="tel:${p.phone}">${p.phone}</a>
                         </div>
                     </div>
                 `).join('') + '</div>';
