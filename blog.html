@@ -74,14 +74,14 @@
 
         .blog-header h1 {
             font-size: 3em;
-            color: white;
+            color: #1a1a1a;
             margin-bottom: 20px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
 
         .blog-header p {
             font-size: 1.2em;
-            color: white;
+            color: #1a1a1a;
             max-width: 700px;
             margin: 0 auto;
         }
@@ -187,12 +187,12 @@
 
         .pagination button:hover {
             background: #667eea;
-            color: white;
+            color: #1a1a1a;
         }
 
         .pagination button.active {
             background: #667eea;
-            color: white;
+            color: #1a1a1a;
         }
 
         .no-results {
@@ -219,7 +219,7 @@
 
         footer {
             background: #1a1a1a;
-            color: white;
+            color: #1a1a1a;
             padding: 40px;
             text-align: center;
             margin-top: 60px;
@@ -249,7 +249,39 @@
                 grid-template-columns: 1fr;
             }
         }
-    </style>
+    
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .blog-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: grid;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(30, 90, 150, 0.15);
+        }
+        
+        .blog-card a {
+            text-decoration: none;
+            color: #1e5a96;
+        }
+        
+        .blog-card h3 {
+            color: #1e5a96;
+            padding: 1rem;
+            margin: 0;
+        }
+</style>
     <!-- Google Analytics (GA4) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-542W6ZTYH8"></script>
     <script>
@@ -342,5 +374,21 @@
           }
         }
       });
+
+        <script>
+            // Ensure all blogs are visible
+            document.addEventListener('DOMContentLoaded', function() {
+                const blogCards = document.querySelectorAll('.blog-card');
+                console.log('Total blogs found: ' + blogCards.length);
+                blogCards.forEach(card => {
+                    card.style.display = 'block';
+                });
+                
+                const blogGrid = document.querySelector('.blog-grid');
+                if (blogGrid) {
+                    blogGrid.style.display = 'grid';
+                }
+            });
+        </script>
 </body>
 </html>
