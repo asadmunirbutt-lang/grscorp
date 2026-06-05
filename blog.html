@@ -401,7 +401,7 @@
                     const card = document.createElement('a');
                     card.href = '/posts/' + slug;
                     card.className = 'blog-card';
-                    card.innerHTML = '<div class="blog-card-header"></div><div class="blog-card-body"><h3 class="blog-card-title">' + slug.replace(/-/g, ' ') + '</h3></div>';
+                    card.innerHTML = '<div class="blog-card-body"><h3 class="blog-card-title">' + slug.replace(/-/g, ' ') + '</h3></div>';
                     container.appendChild(card);
                 });
             }
@@ -417,7 +417,7 @@
                         const card = document.createElement('a');
                         card.href = '/posts/' + slug;
                         card.className = 'blog-card';
-                        card.innerHTML = '<div class="blog-card-header"></div><div class="blog-card-body"><h3 class="blog-card-title">' + slug.replace(/-/g, ' ') + '</h3></div>';
+                        card.innerHTML = '<div class="blog-card-body"><h3 class="blog-card-title">' + slug.replace(/-/g, ' ') + '</h3></div>';
                         container.appendChild(card);
                     });
                 });

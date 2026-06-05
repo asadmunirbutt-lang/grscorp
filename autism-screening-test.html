@@ -688,10 +688,10 @@
 
         <div class="section quiz-section">
             <div class="progress-bar">
-                <div class="progress-fill" id="progressFill"></div>
+                
             </div>
-            <div class="question-counter" id="questionCounter"></div>
-            <div id="questionsContainer"></div>
+            
+            
             <div class="button-group">
                 <button class="btn-secondary" id="prevBtn" onclick="previousQuestion()" style="display: none;">← Previous</button>
                 <button class="btn-primary" id="nextBtn" onclick="nextQuestion()">Next →</button>
@@ -709,7 +709,7 @@
                     <h3>What This Means</h3>
                     <p>Loading your personalized results...</p>
                 </div>
-                <div id="directoryContainer"></div>
+                
                 <div class="share-section">
                     <h3>📤 Share Your Results</h3>
                     <p style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 1rem;">Share your screening results with friends, family, or healthcare providers.</p>
@@ -912,7 +912,7 @@
                                     ${scores[index] === answer.score ? 'checked' : ''}
                                     onchange="scores[${index}] = ${answer.score}">
                                 <label for="opt${i}">
-                                    <div class="option-radio"></div>
+                                    
                                     ${answer.text}
                                 </label>
                             </div>
