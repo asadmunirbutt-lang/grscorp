@@ -713,16 +713,16 @@
                 </div>
                 
                 <div class="share-section">
-                    <h3>✓Share Your Results</h3>
+                    <h3>Share Your Results</h3>
                     <p style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 1rem;">Share your screening results with friends, family, or healthcare providers.</p>
                     <div class="share-buttons">
-                        <button class="share-btn share-btn-email" onclick="emailResults()">✓Email Results</button>
-                        <button class="share-btn share-btn-copy" onclick="copyResultsLink()">✓Copy Link</button>
-                        <button class="share-btn share-btn-facebook" onclick="shareToFacebook()">✓Facebook</button>
+                        <button class="share-btn share-btn-email" onclick="emailResults()">Email Results</button>
+                        <button class="share-btn share-btn-copy" onclick="copyResultsLink()">Copy Link</button>
+                        <button class="share-btn share-btn-facebook" onclick="shareToFacebook()">Facebook</button>
                         <button class="share-btn share-btn-twitter" onclick="shareToTwitter()">ð• Twitter</button>
                     </div>
                     <div class="share-test-section">
-                        <p><strong>✓Share This Test With Others</strong></p>
+                        <p><strong>Share This Test With Others</strong></p>
                         <p style="color: var(--text-gray); font-size: 0.85rem;">Invite friends and family to take the autism screening tool. The more people who understand themselves, the better.</p>
                         <div class="share-test-buttons">
                             <button class="share-btn share-btn-copy" onclick="shareTestLink()" style="flex: 1;">Copy Test Link</button>
@@ -997,11 +997,11 @@
                         <div class="professional-title">${p.title}</div>
                         <div class="professional-info">
                             <strong>${p.specialty}</strong><br>
-                            ✓${p.city}, ${p.state}<br>
-                            ${p.accepts_telehealth ? '✓Telehealth available' : ''}
+                            ${p.city}, ${p.state}<br>
+                            ${p.accepts_telehealth ? 'Telehealth available' : ''}
                         </div>
                         <div class="professional-contact" style="margin-top: 0.5rem;">
-                            ✓<a href="tel:${p.phone}">${p.phone}</a>
+                            <a href="tel:${p.phone}">${p.phone}</a>
                         </div>
                     </div>
                 `).join('') + '</div>';
