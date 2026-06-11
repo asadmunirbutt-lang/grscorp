@@ -25,6 +25,39 @@
         .program-card { background: #f5f7fa; padding: 30px; border-radius: 8px; border-top: 4px solid #0d9488; }
         .program-card h3 { color: #1a4d8f; }
         .icon { font-size: 3rem; margin-bottom: 15px; }
+        .resource-card {
+            display: block;
+            background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 5px solid #0d9488;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .resource-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(13, 148, 136, 0.15);
+            border-left-color: #1a4d8f;
+        }
+        .resource-card h3 {
+            color: #1a4d8f;
+            font-size: 1.2rem;
+            margin: 15px 0 10px 0;
+            font-weight: 600;
+        }
+        .resource-card p {
+            color: #555;
+            font-size: 0.95rem;
+            margin: 0;
+            line-height: 1.5;
+        }
+        .resource-icon {
+            font-size: 1.8rem;
+            color: #0d9488;
+            font-weight: bold;
+        }
         footer { background: #0d2d5e; color: white; padding: 40px 32px; text-align: center; margin-top: 80px; }
         footer a { color: #fef8ec; }
     </style>
@@ -104,21 +137,45 @@
             </div>
         </div>
 
-        <h2>Screening & Evaluation Tools</h2>
+        <h2 style="margin-top: 60px;">Screening & Evaluation Tools</h2>
         <p>Start your journey with our free autism screening tools:</p>
-        <ul style="margin-left: 20px; margin-bottom: 20px;">
-            <li><a href="/autism-screening-test.html">Autism Screening Test</a> - Initial screening for potential autism traits</li>
-            <li><a href="/posts/how-to-get-autism-evaluation.html">Guide to Autism Evaluation</a> - Learn about the evaluation process</li>
-            <li><a href="/posts/signs-of-autism-in-adults.html">Signs of Autism in Adults</a> - Discover adult autism traits and support</li>
-        </ul>
+        <div class="programs-grid">
+            <a href="/autism-screening-test.html" class="resource-card">
+                <div class="resource-icon">✓</div>
+                <h3>Autism Screening Test</h3>
+                <p>Initial screening for potential autism traits</p>
+            </a>
+            <a href="/posts/how-to-get-autism-evaluation.html" class="resource-card">
+                <div class="resource-icon">✓</div>
+                <h3>Guide to Autism Evaluation</h3>
+                <p>Learn about the evaluation process</p>
+            </a>
+            <a href="/posts/signs-of-autism-in-adults.html" class="resource-card">
+                <div class="resource-icon">✓</div>
+                <h3>Signs of Autism in Adults</h3>
+                <p>Discover adult autism traits and support</p>
+            </a>
+        </div>
 
-        <h2>Educational Resources</h2>
+        <h2 style="margin-top: 60px;">Educational Resources</h2>
         <p>Explore our blog for practical guides and information:</p>
-        <ul style="margin-left: 20px; margin-bottom: 20px;">
-            <li><a href="/posts/autism-iep-guide.html">IEP & School Rights Guide</a> - Understanding IEPs and advocating for your child</li>
-            <li><a href="/posts/nys-autism-school-resources.html">NY Autism School Resources</a> - Resources specific to New York State</li>
-            <li><a href="/posts/autism-ai-apps-families-need.html">Autism AI Apps Families Need</a> - Technology tools to support autism</li>
-        </ul>
+        <div class="programs-grid">
+            <a href="/posts/autism-iep-guide.html" class="resource-card">
+                <div class="resource-icon">✓</div>
+                <h3>IEP & School Rights Guide</h3>
+                <p>Understanding IEPs and advocating for your child</p>
+            </a>
+            <a href="/posts/nys-autism-school-resources.html" class="resource-card">
+                <div class="resource-icon">✓</div>
+                <h3>NY Autism School Resources</h3>
+                <p>Resources specific to New York State</p>
+            </a>
+            <a href="/posts/autism-ai-apps-families-need.html" class="resource-card">
+                <div class="resource-icon">✓</div>
+                <h3>Autism AI Apps Families Need</h3>
+                <p>Technology tools to support autism</p>
+            </a>
+        </div>
 
         <h2>Get Involved</h2>
         <p>Interested in learning more or getting involved? <a href="/contact.html">Contact us today</a> to discuss which programs might be right for you or your family.</p>
