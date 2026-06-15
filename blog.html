@@ -379,7 +379,11 @@
 
         <script>
             // Ensure all blogs are visible
-            document.addEventListener('DOMContentLoaded', function() {
+            function toTitleCase(str) {
+                    return str.replace(/-/g, ' ').replace(/\b\w/g, function(c) { return c.toUpperCase(); });
+                }
+
+                document.addEventListener('DOMContentLoaded', function() {
                 const blogCards = document.querySelectorAll('.blog-card');
                 console.log('Total blogs found: ' + blogCards.length);
                 blogCards.forEach(card => {
@@ -404,7 +408,7 @@
                     const card = document.createElement('a');
                     card.href = '/posts/' + slug + '.html';
                     card.className = 'blog-card';
-                    card.innerHTML = '<div class="blog-card-body"><h3 class="blog-card-title">' + slug.replace(/-/g, ' ') + '</h3></div>';
+                    card.innerHTML = '<div class="blog-card-body"><h3 class="blog-card-title">' + toTitleCase(slug) + '</h3></div>';
                     container.appendChild(card);
                 });
             }
@@ -420,19 +424,25 @@
                         const card = document.createElement('a');
                         card.href = '/posts/' + slug + '.html';
                         card.className = 'blog-card';
-                        card.innerHTML = '<div class="blog-card-body"><h3 class="blog-card-title">' + slug.replace(/-/g, ' ') + '</h3></div>';
+                        card.innerHTML = '<div class="blog-card-body"><h3 class="blog-card-title">' + toTitleCase(slug) + '</h3></div>';
                         container.appendChild(card);
                     });
                 });
             }
 
             if (document.readyState === 'loading') {
+                    return str.replace(/-/g, ' ').replace(/\b\w/g, function(c) { return c.toUpperCase(); });
+                }
+
                 document.addEventListener('DOMContentLoaded', loadBlogs);
             } else {
                 loadBlogs();
             }
         </script></body>
 </html>
+
+
+
 
 
 
