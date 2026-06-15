@@ -1,0 +1,127 @@
+================================================================================
+GRSCorp Website — Session Snapshot & Handoff
+Created: May 29, 2026
+Status: LIVE & DEPLOYED
+================================================================================
+
+QUICK STATUS
+============
+✅ grscorp.org is LIVE right now
+✅ index.html deployed to GitHub
+✅ DNS configured and verified
+✅ Site accessible in browser
+✅ Auto-deploys enabled
+
+================================================================================
+DEPLOYMENT DETAILS
+================================================================================
+
+GitHub Repo:
+https://github.com/asadmunirbutt-lang/grscorp
+
+Live Website:
+https://grscorp.org
+
+Existing WordPress Site (unchanged):
+https://grscorp.us (109 published blog posts)
+
+================================================================================
+CURRENT SETUP
+================================================================================
+
+Folder Structure:
+- index.html (homepage, deployed)
+- pages/ (new pages go here)
+- posts/ (new blog posts go here)
+- assets/ (images, logos, files)
+
+DNS Records Added (4 A records):
+- 185.199.108.153
+- 185.199.109.153
+- 185.199.110.153
+- 185.199.111.153
+
+DNS Status: ✅ Verified and Working
+
+================================================================================
+HTTPS STATUS (Important)
+================================================================================
+
+Current: Shows "not secure" warning in browser
+Reason: SSL certificate is provisioning
+Expected: Auto-enables within 24 hours
+Action: NONE — it will fix itself
+
+You can still access the site. The warning goes away automatically.
+
+================================================================================
+HOW TO WORK GOING FORWARD
+================================================================================
+
+Simple commands to Claude Code:
+
+1. Create a blog post:
+   "Write a blog post about [topic]. Include [key points]."
+
+2. Create a new page:
+   "Create a page about [subject] with [sections]."
+
+3. Update homepage:
+   "Update the homepage to [describe what you want]."
+
+4. Add any content:
+   Claude Code writes it, puts it in the right folder, deploys it.
+
+Everything happens automatically — no manual uploads needed.
+
+================================================================================
+CONTEXT CLAUDE CODE ALREADY HAS
+================================================================================
+
+You don't need to re-explain these:
+✓ GRSCorp mission, vision, values
+✓ Founding story (Asad & Mohammed)
+✓ All 109 blog posts on grscorp.us
+✓ Board and team members
+✓ 101-acre nature preserve project
+✓ SEPTA initiatives
+✓ Brand voice and tone
+✓ All grscorp.us URLs
+✓ Donor and volunteer links
+
+Just give commands. Context is already there.
+
+================================================================================
+IMPORTANT LINKS
+================================================================================
+
+Live Website:         https://grscorp.org
+GitHub Repository:    https://github.com/asadmunirbutt-lang/grscorp
+Existing Site:        https://grscorp.us
+Organization Email:   info@grscorp.us
+
+Original Handoff:     ASAD_HANDOFF.md (in Documents/GSCorp)
+
+================================================================================
+KEY FACTS TO REMEMBER
+================================================================================
+
+• Website is LIVE right now
+• Site shows as "not secure" temporarily (normal, auto-fixes in 24 hrs)
+• grscorp.us has 109 blogs (not 25) — all untouched
+• Everything on new site auto-deploys
+• You work through simple Claude Code commands
+• No technical knowledge needed after this setup
+
+================================================================================
+NEXT STEPS
+================================================================================
+
+1. ✅ DONE: Deploy homepage
+2. ⏳ NEXT: Create additional pages (About, Contact, etc.)
+3. ⏳ NEXT: Publish new blog posts
+4. ⏳ NEXT: Add assets (images, logos, PDFs, etc.)
+
+================================================================================
+YOUR WEBSITE IS READY. START BUILDING.
+================================================================================

@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goals | GRSCorp</title>
+    <link rel="icon" type="image/png" href="/assets/logo.png">
+    <link rel="shortcut icon" type="image/png" href="/assets/logo.png">
+    <meta name="description" content="Goals - Global Relief and Support Corporation">
+
+    
+    
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: #1a2535;
+            background: #ffffff;
+            line-height: 1.7;
+            font-size: 16px;
+        }
+        a { text-decoration: none; color: #1a4d8f; }
+        a:hover { text-decoration: underline; }
+
+        :root {
+            --blue: #1a4d8f;
+            --blue-dark: #0d2d5e;
+            --text: #1a2535;
+            --text-soft: #6b7c8d;
+            --border: #dde3ec;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: #fff;
+            border-bottom: 1px solid var(--border);
+            padding: 0 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 68px;
+        }
+
+        .nav-logo { display: flex; flex-direction: column; line-height: 1.2; }
+        .nav-logo-main {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--blue-dark);
+        }
+        .nav-logo-sub {
+            font-size: 10px;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: var(--text-soft);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
+        }
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text);
+        }
+        .nav-links a:hover { color: var(--blue); }
+
+        .hero {
+            background: linear-gradient(150deg, #0d2240 0%, #1a4d8f 50%, #0d7a6e 100%);
+            color: #fff;
+            padding: 60px 32px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2.8rem;
+            font-weight: 400;
+            margin-bottom: 16px;
+        }
+
+        .hero-sub {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 60px 32px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section h2, .section h3, .section h4, .section h5, .section h6 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--blue-dark);
+            margin-top: 24px;
+            margin-bottom: 12px;
+        }
+
+        .section h2 { font-size: 2rem; }
+        .section h3 { font-size: 1.4rem; }
+
+        .section p {
+            font-size: 1rem;
+            color: var(--text);
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        .section ul, .section ol {
+            margin-left: 20px;
+            margin-bottom: 16px;
+        }
+
+        .section li {
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+
+        .section img {
+            max-width: 100%;
+            height: auto;
+            margin: 16px 0;
+            border-radius: 8px;
+        }
+
+        .back-link {
+            margin-bottom: 40px;
+        }
+
+        .back-link a {
+            color: var(--blue);
+            font-weight: 600;
+        }
+
+        footer {
+            background: var(--blue-dark);
+            color: rgba(255,255,255,0.6);
+            padding: 40px 32px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            nav { padding: 0 20px; }
+            .section { padding: 40px 20px; }
+            .hero h1 { font-size: 2rem; }
+        }
+    </style>
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-542W6ZTYH8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-542W6ZTYH8');
+    </script>
+
+    <!-- Google Ads Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1133270985"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-1133270985');
+    </script>
+  </head>
+<body>
+
+<nav role="navigation">
+    <a href="/" class="nav-logo">
+        <span class="nav-logo-main">GRS Corp</span>
+        <span class="nav-logo-sub">Extending Support for Autism</span>
+    </a>
+    <ul class="nav-links" role="list">
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/programs.html">Programs</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+    </ul>
+</nav>
+
+<header class="hero">
+    <h1>Goals</h1>
+    <p class="hero-sub">Global Relief and Support Corporation - Extending Support for Autism</p>
+</header>
+
+<section class="section">
+    <div class="back-link">
+        <a href="/">â† Back to Home</a>
+    </div>
+    <div>
+        <div data-elementor-type="wp-page" data-elementor-id="987918" class="elementor elementor-987918" data-elementor-post-type="page"><section class="elementor-section elementor-top-section elementor-element elementor-element-24a1e90 elementor-section-full_width elementor-section-height-min-height animated-fast elementor-section-height-default elementor-section-items-middle elementor-invisible" data-id="24a1e90" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeIn&quot;}"><div class="elementor-container elementor-column-gap-no"><div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-317c717f" data-id="317c717f" data-element_type="column" data-e-type="column"></div></div></section><section class="elementor-section elementor-top-section elementor-element elementor-element-20863e24 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="20863e24" data-element_type="section" data-e-type="section"><div class="elementor-container elementor-column-gap-no"><div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-6a55b49" data-id="6a55b49" data-element_type="column" data-e-type="column" data-settings="{&quot;motion_fx_motion_fx_scrolling&quot;:&quot;yes&quot;,&quot;motion_fx_translateY_effect&quot;:&quot;yes&quot;,&quot;motion_fx_translateY_speed&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;motion_fx_devices&quot;:[&quot;desktop&quot;],&quot;motion_fx_translateY_affectedRange&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:{&quot;start&quot;:0,&quot;end&quot;:100}}}"><div class="elementor-widget-wrap elementor-element-populated"><div class="elementor-element elementor-element-6ca5e01d elementor-widget elementor-widget-heading" data-id="6ca5e01d" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default"><div class="elementor-widget-container"><h4 class="elementor-heading-title elementor-size-default">Empowering autism with compassion and understanding.</h4></div></div><div class="elementor-element elementor-element-6efabd07 elementor-widget__width-auto elementor-widget-tablet__width-auto elementor-widget-mobile__width-inherit vamtam-align-left elementor-widget elementor-widget-heading" data-id="6efabd07" data-element_type="widget" data-e-type="widget" data-widget_type="heading.heading_caridad"><div class="elementor-widget-container"><h1 class='vamtam-heading-wrapper'><div class="elementor-heading-title">Goals</div></h1></div></div></div></div><div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-67093a59 elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-phone" data-id="67093a59" data-element_type="column" data-e-type="column"></div></div></section><section class="elementor-section elementor-top-section elementor-element elementor-element-574e743b elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="574e743b" data-element_type="section" data-e-type="section"><div class="elementor-container elementor-column-gap-default"><div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-76bce488" data-id="76bce488" data-element_type="column" data-e-type="column"><div class="elementor-widget-wrap elementor-element-populated"><div class="elementor-element elementor-element-25a7232c elementor-widget elementor-widget-heading" data-id="25a7232c" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default"><div class="elementor-widget-container"><h4 class="elementor-heading-title elementor-size-default">Goals</h4></div></div><div class="elementor-element elementor-element-44201581 elementor-widget elementor-widget-text-editor" data-id="44201581" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default"><div class="elementor-widget-container"><p>Goals that the Global Relief &amp; Support Corporation (GRS Corp) might aim for to fulfill its purpose</p></div></div></div></div></div></section><section class="elementor-section elementor-top-section elementor-element elementor-element-6f6c58c7 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="6f6c58c7" data-element_type="section" data-e-type="section"><div class="elementor-container elementor-column-gap-default"><div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-64f8143a" data-id="64f8143a" data-element_type="column" data-e-type="column"><div class="elementor-widget-wrap elementor-element-populated"><div class="elementor-element elementor-element-39edfb90 elementor-widget elementor-widget-heading" data-id="39edfb90" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default"><div class="elementor-widget-container"><h4 class="elementor-heading-title elementor-size-default">Purposes</h4></div></div><div class="elementor-element elementor-element-6ff7daad elementor-widget elementor-widget-text-editor" data-id="6ff7daad" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default"><div class="elementor-widget-container"><ul><li>Raise Awareness: Increase public understanding and awareness of autism by organizing awareness campaigns and educational events.</li><li>Advocacy Success: Successfully lobby for policy changes and legal measures that promote the rights and well-being of individuals with autism.</li><li>Resource Expansion: Develop and curate a comprehensive set of educational resources for families, educators, and communities, available both online and offline.</li><li>Support Network: Expand the reach of support services, ensuring that individuals and families across various regions have access to appropriate resources and networks.</li><li>Inclusive Community: Host regular community-building events and initiatives that bring together individuals with autism and their families, fostering a sense of belonging.</li><li>Nature Integration: Establish and promote nature-based programs that provide therapeutic and recreational benefits to individuals on the Autism Spectrum.</li><li>Educational Partnerships: Collaborate with schools to establish Special Education Parents Teachers Associations (SEPTA) and facilitate workshops that enhance understanding of autism among educators.</li><li>Affiliate Network Growth: Successfully establish a network of local, state, and national affiliates to amplify the organization&#8217;s impact and reach.</li><li>Empowerment Programs: Develop programs and workshops that equip individuals with autism with practical skills to enhance their independence and self-esteem.</li><li>Research Contribution: Partner with research institutions to contribute to the understanding of autism and advocate for more inclusive research practices.</li><li>Technology Utilization: Leverage technology to create digital platforms for information sharing, online support groups, and virtual events.</li><li>Collaborative Initiatives: Forge partnerships with other organizations, both within and outside the autism community, to create a more inclusive society overall.</li></ul><p>These goals reflect GRS Corp&#8217;s commitment to improving the lives of individuals with autism by advocating for their rights, providing educational resources, fostering a supportive community, and exploring innovative approaches to enrich their experiences.</p></div></div></div></div></div></section></div>
+    </div>
+    
+    <div style="text-align: center; margin: 40px 0;"><svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto; margin: 30px 0;"><text x="300" y="35" font-size="18" font-weight="bold" fill="#1a4d8f" text-anchor="middle">Our Strategic Goals</text><rect x="30" y="70" width="140" height="100" fill="#ff6b6b" rx="8"/><text x="100" y="100" font-size="11" fill="white" font-weight="bold" text-anchor="middle">Raise Awareness</text></svg></div>
+    <hr style="margin: 40px 0; border: none; border-top: 1px solid var(--border);">
+    <p style="text-align: center; margin-top: 40px;">
+        <a href="/" style="color: var(--blue); font-weight: 600;">â† Back to Home</a>
+    </p>
+</section>
+
+<footer>
+    <p>&copy; 2026 Global Relief and Support Corporation. All rights reserved.</p>
+    <p><a href="/privacy-policy.html">Privacy Policy</a></p>
+</footer>
+
+    
+    <script>
+      function trackContactConversion() {
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'conversion', {
+            'value': 1.0,
+            'currency': 'USD',
+            'transaction_id': 'contact_' + Date.now()
+          });
+        }
+      }
+
+      function trackDownloadConversion() {
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'file_download', {
+            'file_name': 'resource'
+          });
+        }
+      }
+
+      let scrollTracked = false;
+      window.addEventListener('scroll', function() {
+        if (!scrollTracked && (window.scrollY > window.innerHeight)) {
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'page_engagement', {
+              'engagement_type': 'scroll',
+              'scroll_depth': Math.round((window.scrollY / document.documentElement.scrollHeight) * 100)
+            });
+          }
+          scrollTracked = true;
+        }
+      });
+
+      document.addEventListener('click', function(e) {
+        const link = e.target.closest('a');
+        if (link && link.href && (link.href.startsWith('http') || link.href.startsWith('//'))) {
+          if (!link.href.includes('grscorp.org')) {
+            if (typeof gtag !== 'undefined') {
+              gtag('event', 'click', {
+                'link_url': link.href,
+                'link_text': link.textContent
+              });
+            }
+          }
+        }
+      });
+</body>
+</html>
