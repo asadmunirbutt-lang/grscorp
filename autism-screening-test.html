@@ -56,11 +56,11 @@
       "@type": "AssessmentTest",
       "name": "Autism Self-Assessment Screening Tool",
       "description": "A free 10-question screening tool to help determine if professional evaluation for autism may be beneficial",
-      "url": "https://grscorp.org/autism-screening-test.html",
+      "url": "https://grscorp.us/autism-screening-test.html",
       "author": {
         "@type": "Organization",
         "name": "GRSCorp",
-        "url": "https://grscorp.org"
+        "url": "https://grscorp.us"
       }
     }
     </script>
@@ -1039,7 +1039,7 @@
         function emailResults() {
             const results = getResultsSummary();
             const subject = `Autism Screening Tool Results - Score: ${results.score}/30`;
-            const body = `I took the Free Autism Self-Assessment Screening Tool and wanted to share my results:%0D%0A%0D%0AScore: ${results.score} out of 30 points%0D%0ACategory: ${results.category}%0D%0AAge Range: ${results.age}%0D%0AState: ${results.state}%0D%0A%0D%0AYou can also take the test here: https://grscorp.org/autism-screening-test.html%0D%0A%0D%0ANote: This is a screening tool only, not a diagnosis. Please consult with a healthcare professional for evaluation.`;
+            const body = `I took the Free Autism Self-Assessment Screening Tool and wanted to share my results:%0D%0A%0D%0AScore: ${results.score} out of 30 points%0D%0ACategory: ${results.category}%0D%0AAge Range: ${results.age}%0D%0AState: ${results.state}%0D%0A%0D%0AYou can also take the test here: https://grscorp.us/autism-screening-test.html%0D%0A%0D%0ANote: This is a screening tool only, not a diagnosis. Please consult with a healthcare professional for evaluation.`;
             window.location.href = `mailto:?subject=${subject}&body=${body}`;
         }
 
@@ -1071,8 +1071,8 @@
         }
 
         function shareTestLink() {
-            const testLink = 'https://grscorp.org/autism-screening-test.html';
-            const message = `Take the Free Autism Self-Assessment Screening Tool. It's a quick 10-question quiz that takes 5-10 minutes. https://grscorp.org/autism-screening-test.html`;
+            const testLink = 'https://grscorp.us/autism-screening-test.html';
+            const message = `Take the Free Autism Self-Assessment Screening Tool. It's a quick 10-question quiz that takes 5-10 minutes. https://grscorp.us/autism-screening-test.html`;
             navigator.clipboard.writeText(message).then(() => {
                 alert('Test link copied! You can paste it in emails, messages, or social media to invite others.');
             }).catch(() => {
@@ -1118,7 +1118,7 @@
       document.addEventListener('click', function(e) {
         const link = e.target.closest('a');
         if (link && link.href && (link.href.startsWith('http') || link.href.startsWith('//'))) {
-          if (!link.href.includes('grscorp.org')) {
+          if (!link.href.includes('grscorp.us')) {
             if (typeof gtag !== 'undefined') {
               gtag('event', 'click', {
                 'link_url': link.href,
@@ -1130,3 +1130,4 @@
       });
 </body>
 </html>
+

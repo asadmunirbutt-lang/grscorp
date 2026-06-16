@@ -1,8 +1,8 @@
-# Google Ads Conversion Tracking Setup Guide
+﻿# Google Ads Conversion Tracking Setup Guide
 
 ## What We've Added
 
-Your grscorp.org website now has:
+Your grscorp.us website now has:
 
 1. **Google Analytics tracking** - G-542W6ZTYH8 (already installed)
 2. **Google Ads conversion events** - Event-based tracking on all 20 pages
@@ -105,7 +105,7 @@ If you have specific buttons/forms you want to track, add this to your HTML:
 
 ## Deployed Events
 
-The following events are now automatically tracked on grscorp.org:
+The following events are now automatically tracked on grscorp.us:
 
 | Event | Trigger | Campaign Impact |
 |-------|---------|-----------------|
@@ -116,12 +116,13 @@ The following events are now automatically tracked on grscorp.org:
 
 ## Next Steps
 
-1. ✅ Conversion tracking code: DEPLOYED to all pages
-2. ⏳ Google Analytics setup: CREATE conversion events (Steps 1-2)
-3. ⏳ Google Ads setup: LINK conversions (Steps 3-4)
-4. ⏳ Verification: CHECK data flow (Step 5)
+1. âœ… Conversion tracking code: DEPLOYED to all pages
+2. â³ Google Analytics setup: CREATE conversion events (Steps 1-2)
+3. â³ Google Ads setup: LINK conversions (Steps 3-4)
+4. â³ Verification: CHECK data flow (Step 5)
 
 Once you complete steps 2-5, all Google Ads diagnostic issues should be resolved.
 
 ---
 **Estimated time to resolution**: 30-60 minutes + 24-48 hours for data to flow through systems
+

@@ -1,18 +1,18 @@
-# Google Ads Conversion Actions Setup - Complete Instructions
+﻿# Google Ads Conversion Actions Setup - Complete Instructions
 
 ## Your Account Details
 - **Google Ads Account ID**: 1436034674
 - **Google Ads Conversion ID**: AW-1133270985
-- **Website**: grscorp.org
+- **Website**: grscorp.us
 - **Campaigns to Configure**:
   1. Adult Autism Signs
   2. Child Autism Evaluation  
   3. IEP & S
 
 ## What's Already Done
-✅ Google Analytics installed (G-542W6ZTYH8)
-✅ Google Ads conversion tag installed (AW-1133270985)
-✅ Event tracking code deployed (conversion, file_download, page_engagement events)
+âœ… Google Analytics installed (G-542W6ZTYH8)
+âœ… Google Ads conversion tag installed (AW-1133270985)
+âœ… Event tracking code deployed (conversion, file_download, page_engagement events)
 
 ## What You Need to Do: Create Conversion Actions
 
@@ -82,9 +82,9 @@
 4. Scroll to **Conversion actions**
 5. Click the pencil icon to edit
 6. **Check the boxes** for:
-   - ✓ Contact Form Submission
-   - ✓ Resource Download
-   - ✓ High Engagement (Page Scroll) [optional]
+   - âœ“ Contact Form Submission
+   - âœ“ Resource Download
+   - âœ“ High Engagement (Page Scroll) [optional]
 
 7. Click **Save**
 
@@ -99,7 +99,7 @@
 If Google Ads conversion import doesn't work:
 
 1. Go to **Google Analytics** (analytics.google.com)
-2. **Admin** → **Events**
+2. **Admin** â†’ **Events**
 3. Look for events: `conversion`, `file_download`, `page_engagement`
 4. Mark them as **Conversion Events** (toggle switch)
 5. Wait 24 hours for data to sync to Google Ads
@@ -109,7 +109,7 @@ If Google Ads conversion import doesn't work:
 ## Verification Steps
 
 **After 1-2 hours:**
-1. Go to Google Ads → **Campaigns**
+1. Go to Google Ads â†’ **Campaigns**
 2. Add column: **Conversions** (customize columns)
 3. Should show conversion tracking is active
 
@@ -123,22 +123,22 @@ If Google Ads conversion import doesn't work:
 ## Troubleshooting
 
 ### "Can't find event in Google Analytics"
-- Go to GA4 → Real-time
+- Go to GA4 â†’ Real-time
 - Trigger the event on your website (scroll page, click external link, etc.)
 - Verify event appears in Real-time view
 - Wait 24 hours, then try creating conversion again
 
 ### "Conversions not showing in Ads"
 1. Verify GA and Ads are linked:
-   - GA → Admin → Data Streams → Linked Services
+   - GA â†’ Admin â†’ Data Streams â†’ Linked Services
    - Should show Google Ads connected
 
 2. Check conversion actions exist:
-   - Ads → Tools → Conversions
+   - Ads â†’ Tools â†’ Conversions
    - All 3 should be listed
 
 3. Check campaign assignment:
-   - Ads → Campaigns → Settings
+   - Ads â†’ Campaigns â†’ Settings
    - All 3 conversions should be checked
 
 ### "Campaign still says misconfigured"
@@ -166,8 +166,8 @@ These events are firing automatically on your website:
 
 | Task | Timeline | Status |
 |------|----------|--------|
-| Install Google Ads tag | ✅ Complete | Deployed |
-| Create conversion actions | 10 minutes | **← You are here** |
+| Install Google Ads tag | âœ… Complete | Deployed |
+| Create conversion actions | 10 minutes | **â† You are here** |
 | Link conversions to campaigns | 5 minutes | Pending |
 | Google Ads detection | 5-10 min after linking | Pending |
 | Data flow to Ads | 24-48 hours | Pending |
@@ -178,8 +178,9 @@ These events are firing automatically on your website:
 ## Still Having Issues?
 
 If conversions don't appear after 48 hours:
-1. Check if events are firing: GA4 → Real-time
+1. Check if events are firing: GA4 â†’ Real-time
 2. Verify gclid parameter is captured (comes from Ads clicks)
-3. Check for JavaScript errors: Press F12 → Console tab
+3. Check for JavaScript errors: Press F12 â†’ Console tab
 4. Ensure conversion value is > $0
+
 

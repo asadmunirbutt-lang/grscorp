@@ -59,7 +59,7 @@
   </head>
 <body>
     <nav>
-        <a href="https://grscorp.org/" style="font-size: 1.2rem; font-weight: 600;">GRSCorp</a>
+        <a href="https://grscorp.us/" style="font-size: 1.2rem; font-weight: 600;">GRSCorp</a>
         <div>
             <a href="/about.html">About</a>
             <a href="/programs.html">Programs</a>
@@ -188,7 +188,7 @@
       document.addEventListener('click', function(e) {
         const link = e.target.closest('a');
         if (link && link.href && (link.href.startsWith('http') || link.href.startsWith('//'))) {
-          if (!link.href.includes('grscorp.org')) {
+          if (!link.href.includes('grscorp.us')) {
             if (typeof gtag !== 'undefined') {
               gtag('event', 'click', {
                 'link_url': link.href,
@@ -200,4 +200,5 @@
       });
 </body>
 </html>
+
 

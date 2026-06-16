@@ -194,7 +194,17 @@
       "Bash(\ncd /tmp/grscorp-fix\n\necho \"=== CHECKING .htaccess CONFIGURATION ===\"\ncat .htaccess | head -30\n\necho \"\"\necho \"=== CHECKING ACTUAL BLOG FILES ===\"\nls posts/*.html | head -10 | xargs -I {} basename {}\n\necho \"\"\necho \"=== CHECKING TOTAL BLOG COUNT ===\"\nls -1 posts/*.html | wc -l\necho \"total blogs in posts/\"\n)",
       "Bash(\ncd /tmp/grscorp-fix\n\necho \"=== SEARCHING FOR 'INDEPENDENT LIVING' BLOG ===\"\nfind posts -name \"*independent*living*\" -o -name \"*building*life*\"\n\necho \"\"\necho \"=== CHECKING ALL BLOG FILENAMES ===\"\nls posts/*.html | grep -i \"independent\\\\|living\\\\|building\\\\|life\" || echo \"No match found\"\n\necho \"\"\necho \"=== SHOWING ALL 115 BLOGS ===\"\nls -1 posts/*.html | wc -l\necho \"blogs exist but some may not have clean URL routes\"\n)",
       "Bash(\ncd /tmp/grscorp-fix\n\necho \"=== EXTRACTING BLOG SLUGS FROM blog.html ===\"\ngrep -o \"'[a-z0-9-]*'\" blog.html | grep -v \"^\\\\'\\\\'\" | sort -u | wc -l\necho \"slugs in blog.html array\"\n\necho \"\"\necho \"=== EXTRACTING ACTUAL FILENAMES ===\"\nls posts/*.html | sed 's/posts\\\\///' | sed 's/\\\\.html$//' | sort -u | wc -l\necho \"actual blog files \\(without .html\\)\"\n\necho \"\"\necho \"=== CHECKING FOR MISMATCHES ===\"\necho \"Slugs in blog.html that don't have .html files:\"\n\n# Get all slugs from blog.html\ngrep -o \"'[a-z0-9-]*'\" blog.html | tr -d \"'\" | sort -u > /tmp/slugs_in_html.txt\n\n# Get all filenames\nls posts/*.html | sed 's/posts\\\\///' | sed 's/\\\\.html$//' | sort -u > /tmp/actual_files.txt\n\n# Find missing files\ncomm -23 /tmp/slugs_in_html.txt /tmp/actual_files.txt | head -20\n)",
-      "Bash(cd /tmp && ls -la | grep -i grscorp)"
+      "Bash(cd /tmp && ls -la | grep -i grscorp)",
+      "Bash(Get-Content C:\\\\Users\\\\Asadm\\\\.claude\\\\projects\\\\C--Users-Asadm-Documents-GSCorp\\\\memory\\\\google-ads-mcp-setup.md)",
+      "mcp__googleAdsServer__get_ad_performance",
+      "mcp__googleAdsServer__get_ad_creatives",
+      "mcp__googleAdsServer__update_ad_status",
+      "mcp__googleAdsServer__create_responsive_search_ad",
+      "mcp__googleAdsServer__update_campaign_budget",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\Asadm\\\\Documents\\\\GSCorp\\\\how-to-get-autism-evaluation.html\", \"C:\\\\Users\\\\Asadm\\\\Documents\\\\GSCorp\\\\autism-screening-test.html\", \"C:\\\\Users\\\\Asadm\\\\Documents\\\\GSCorp\\\\signs-of-autism-in-adults.html\" -ErrorAction SilentlyContinue | Select-Object Name, @{Name=\"Size\";Expression={\"{0:N0}\" -f $_.Length + \" bytes\"}})",
+      "Bash(powershell -Command \"Get-Content 'C:\\\\Users\\\\Asadm\\\\Documents\\\\GSCorp\\\\learn-the-sign-of-autism.html' -Tail 20\")",
+      "mcp__visualize__read_me",
+      "mcp__visualize__show_widget"
     ]
   }
 }

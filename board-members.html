@@ -283,7 +283,7 @@
       document.addEventListener('click', function(e) {
         const link = e.target.closest('a');
         if (link && link.href && (link.href.startsWith('http') || link.href.startsWith('//'))) {
-          if (!link.href.includes('grscorp.org')) {
+          if (!link.href.includes('grscorp.us')) {
             if (typeof gtag !== 'undefined') {
               gtag('event', 'click', {
                 'link_url': link.href,
@@ -344,7 +344,7 @@
       document.addEventListener('click', function(e) {
         const link = e.target.closest('a');
         if (link && link.href && (link.href.startsWith('http') || link.href.startsWith('//'))) {
-          if (!link.href.includes('grscorp.org')) {
+          if (!link.href.includes('grscorp.us')) {
             if (typeof gtag !== 'undefined') {
               gtag('event', 'click', {
                 'link_url': link.href,
@@ -356,3 +356,4 @@
       });
 </body>
 </html>
+
