@@ -2,7 +2,7 @@
 
 ## Your Account Details
 - **Google Ads Account ID**: 1436034674
-- **Google Ads Conversion ID**: AW-1133270985
+- **Google Ads Conversion ID**: AW-11332709859
 - **Website**: grscorp.us
 - **Campaigns to Configure**:
   1. Adult Autism Signs
@@ -11,7 +11,7 @@
 
 ## What's Already Done
 âœ… Google Analytics installed (G-542W6ZTYH8)
-âœ… Google Ads conversion tag installed (AW-1133270985)
+âœ… Google Ads conversion tag installed (AW-11332709859)
 âœ… Event tracking code deployed (conversion, file_download, page_engagement events)
 
 ## What You Need to Do: Create Conversion Actions
@@ -182,5 +182,6 @@ If conversions don't appear after 48 hours:
 2. Verify gclid parameter is captured (comes from Ads clicks)
 3. Check for JavaScript errors: Press F12 â†’ Console tab
 4. Ensure conversion value is > $0
+
 
 
