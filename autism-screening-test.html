@@ -948,6 +948,14 @@
         }
 
         function showResults() {
+            // Track screening completion as conversion event
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'screening_completed', {
+                    'event_category': 'engagement',
+                    'event_label': 'autism_screening_tool'
+                });
+            }
+
             const totalScore = scores.reduce((a, b) => a + b, 0);
             let category, message;
 
