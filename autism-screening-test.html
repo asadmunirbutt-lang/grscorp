@@ -92,7 +92,7 @@
             line-height: 1.6;
             color: var(--text-dark);
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            padding: 0;
+            padding: 1rem;
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -100,13 +100,13 @@
         }
         .container {
             width: 100%;
-            max-width: 480px;
+            max-width: 550px;
             background: white;
             border-radius: 12px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             animation: slideUp 0.5s ease-out;
-            margin: 0.5rem auto;
+            margin: 1rem auto;
             padding: 0;
         }
         @keyframes slideUp {
@@ -122,20 +122,20 @@
         .header {
             background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
             color: white;
-            padding: 1rem;
+            padding: 1.25rem;
             text-align: center;
         }
         .header h1 {
-            font-size: 1rem;
-            margin-bottom: 0.3rem;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
             font-weight: 700;
         }
         .header p {
-            font-size: 0.85rem;
+            font-size: 0.95rem;
             opacity: 0.95;
         }
         .section {
-            padding: 1rem;
+            padding: 1.5rem;
             display: none;
             animation: fadeIn 0.3s ease-in;
         }
@@ -181,10 +181,10 @@
         }
         input, select {
             width: 100%;
-            padding: 0.8rem;
+            padding: 1rem;
             border: 2px solid var(--border-light);
             border-radius: 8px;
-            font-size: 0.95rem;
+            font-size: 1rem;
             font-family: inherit;
             transition: all 0.3s ease;
         }
@@ -214,11 +214,11 @@
             font-weight: 500;
         }
         .question-text {
-            font-size: 0.95rem;
+            font-size: 1.05rem;
             font-weight: 600;
             color: var(--primary);
-            margin-bottom: 1rem;
-            line-height: 1.4;
+            margin-bottom: 1.2rem;
+            line-height: 1.5;
         }
         .options {
             display: flex;
@@ -232,7 +232,7 @@
             display: flex;
             align-items: center;
             margin: 0;
-            padding: 0.5rem;
+            padding: 0.75rem 1rem;
             background: var(--light-bg);
             border: 2px solid var(--border-light);
             border-radius: 8px;
@@ -240,6 +240,7 @@
             transition: all 0.3s ease;
             font-weight: 500;
             color: var(--text-dark);
+            font-size: 1rem;
         }
         .option input[type="radio"]:checked + label {
             background: linear-gradient(135deg, rgba(0, 136, 204, 0.15) 0%, rgba(0, 184, 212, 0.05) 100%);
@@ -306,7 +307,7 @@
         }
         .results-text {
             background: var(--light-bg);
-            padding: 1.5rem;
+            padding: 1.75rem;
             border-radius: 8px;
             margin: 1.5rem 0;
             text-align: left;
@@ -314,13 +315,13 @@
         }
         .results-text h3 {
             color: var(--primary);
-            margin-bottom: 0.8rem;
-            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
         }
         .results-text p {
             color: var(--text-gray);
-            font-size: 0.95rem;
-            margin-bottom: 0.8rem;
+            font-size: 1rem;
+            margin-bottom: 1rem;
         }
         .directory-filters {
             display: grid;
@@ -403,8 +404,8 @@
         button {
             flex: 1;
             min-width: 120px;
-            padding: 0.5rem;
-            font-size: 0.95rem;
+            padding: 0.75rem 1rem;
+            font-size: 1rem;
             font-weight: 600;
             border: none;
             border-radius: 8px;
