@@ -249,7 +249,11 @@
       "Bash(git -C \"C:\\\\Users\\\\Asadm\\\\Documents\\\\GSCorp\" commit -m \"Fix blog JS bug and remove .html extensions from all internal links\")",
       "Bash(git -C \"C:\\\\Users\\\\Asadm\\\\Documents\\\\GSCorp\" rm --cached grscorp_temp)",
       "Bash(git -C \"C:\\\\Users\\\\Asadm\\\\Documents\\\\GSCorp\" commit -m \"Remove grscorp_temp embedded repo\")",
-      "Bash(git -C \"C:\\\\Users\\\\Asadm\\\\Documents\\\\GSCorp\" commit -m \"Add GRSCorp logo to all nav bars and post pages, og:image to all pages, remove grscorp_temp\")"
+      "Bash(git -C \"C:\\\\Users\\\\Asadm\\\\Documents\\\\GSCorp\" commit -m \"Add GRSCorp logo to all nav bars and post pages, og:image to all pages, remove grscorp_temp\")",
+      "Bash(git -C \"C:\\\\Users\\\\Asadm\\\\Documents\\\\GSCorp\" add .gitignore)",
+      "Bash(git -C \"C:\\\\Users\\\\Asadm\\\\Documents\\\\GSCorp\" commit -m \"Ignore grscorp_temp directory permanently\")",
+      "Bash(git -C \"C:\\\\Users\\\\Asadm\\\\Documents\\\\GSCorp\" commit -m \"Clean up duplicate nav links on homepage\")",
+      "Bash(git -C \"C:\\\\Users\\\\Asadm\\\\Documents\\\\GSCorp\" add blog.html)"
     ]
   }
 }
