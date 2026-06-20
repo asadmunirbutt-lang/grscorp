@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -309,10 +309,10 @@
             <span class="nav-logo-sub">Extending Support for Autism</span>
         </a>
         <div>
-            <a href="/about.html">About</a>
-            <a href="/programs.html">Programs</a>
+            <a href="/about">About</a>
+            <a href="/programs">Programs</a>
             <a href="/">Home</a>
-            <a href="/contact.html">Contact</a>
+            <a href="/contact">Contact</a>
         </div>
     </nav>
 
@@ -406,7 +406,7 @@
                 container.innerHTML = '';
                 blogSlugs.forEach(slug => {
                     const card = document.createElement('a');
-                    card.href = '/posts/' + slug + '.html';
+                    card.href = '/posts/' + slug;
                     card.className = 'blog-card';
                     card.innerHTML = '<div class="blog-card-body"><h3 class="blog-card-title">' + toTitleCase(slug) + '</h3></div>';
                     container.appendChild(card);
@@ -422,7 +422,7 @@
                     container.innerHTML = '';
                     filtered.forEach(slug => {
                         const card = document.createElement('a');
-                        card.href = '/posts/' + slug + '.html';
+                        card.href = '/posts/' + slug;
                         card.className = 'blog-card';
                         card.innerHTML = '<div class="blog-card-body"><h3 class="blog-card-title">' + toTitleCase(slug) + '</h3></div>';
                         container.appendChild(card);
@@ -431,9 +431,6 @@
             }
 
             if (document.readyState === 'loading') {
-                    return str.replace(/-/g, ' ').replace(/\b\w/g, function(c) { return c.toUpperCase(); });
-                }
-
                 document.addEventListener('DOMContentLoaded', loadBlogs);
             } else {
                 loadBlogs();
