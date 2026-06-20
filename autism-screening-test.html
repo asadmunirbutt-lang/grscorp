@@ -56,11 +56,11 @@
       "@type": "AssessmentTest",
       "name": "Autism Self-Assessment Screening Tool",
       "description": "A free 10-question screening tool to help determine if professional evaluation for autism may be beneficial",
-      "url": "https://grscorp.us/autism-screening-test.html",
+      "url": "https://grscorp.org/autism-screening-test",
       "author": {
         "@type": "Organization",
         "name": "GRSCorp",
-        "url": "https://grscorp.us"
+        "url": "https://grscorp.org"
       }
     }
     </script>
@@ -690,13 +690,12 @@
 
         <div class="section quiz-section">
             <div class="progress-bar">
-                
+                <div class="progress-fill" id="progressFill"></div>
             </div>
-            
-            
+            <div id="questionsContainer"></div>
             <div class="button-group">
-                <button class="btn-secondary" id="prevBtn" onclick="previousQuestion()" style="display: none;">â† Previous</button>
-                <button class="btn-primary" id="nextBtn" onclick="nextQuestion()">Next â†’</button>
+                <button class="btn-secondary" id="prevBtn" onclick="previousQuestion()" style="display: none;">← Previous</button>
+                <button class="btn-primary" id="nextBtn" onclick="nextQuestion()">Next →</button>
             </div>
         </div>
 
@@ -1051,7 +1050,7 @@
         function emailResults() {
             const results = getResultsSummary();
             const subject = `Autism Screening Tool Results - Score: ${results.score}/30`;
-            const body = `I took the Free Autism Self-Assessment Screening Tool and wanted to share my results:%0D%0A%0D%0AScore: ${results.score} out of 30 points%0D%0ACategory: ${results.category}%0D%0AAge Range: ${results.age}%0D%0AState: ${results.state}%0D%0A%0D%0AYou can also take the test here: https://grscorp.us/autism-screening-test.html%0D%0A%0D%0ANote: This is a screening tool only, not a diagnosis. Please consult with a healthcare professional for evaluation.`;
+            const body = `I took the Free Autism Self-Assessment Screening Tool and wanted to share my results:%0D%0A%0D%0AScore: ${results.score} out of 30 points%0D%0ACategory: ${results.category}%0D%0AAge Range: ${results.age}%0D%0AState: ${results.state}%0D%0A%0D%0AYou can also take the test here: https://grscorp.org/autism-screening-test%0D%0A%0D%0ANote: This is a screening tool only, not a diagnosis. Please consult with a healthcare professional for evaluation.`;
             window.location.href = `mailto:?subject=${subject}&body=${body}`;
         }
 
@@ -1083,8 +1082,8 @@
         }
 
         function shareTestLink() {
-            const testLink = 'https://grscorp.us/autism-screening-test.html';
-            const message = `Take the Free Autism Self-Assessment Screening Tool. It's a quick 10-question quiz that takes 5-10 minutes. https://grscorp.us/autism-screening-test.html`;
+            const testLink = 'https://grscorp.org/autism-screening-test';
+            const message = `Take the Free Autism Self-Assessment Screening Tool. It's a quick 10-question quiz that takes 5-10 minutes. https://grscorp.org/autism-screening-test`;
             navigator.clipboard.writeText(message).then(() => {
                 alert('Test link copied! You can paste it in emails, messages, or social media to invite others.');
             }).catch(() => {
