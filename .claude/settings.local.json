@@ -253,7 +253,14 @@
       "Bash(git -C \"C:\\\\Users\\\\Asadm\\\\Documents\\\\GSCorp\" add .gitignore)",
       "Bash(git -C \"C:\\\\Users\\\\Asadm\\\\Documents\\\\GSCorp\" commit -m \"Ignore grscorp_temp directory permanently\")",
       "Bash(git -C \"C:\\\\Users\\\\Asadm\\\\Documents\\\\GSCorp\" commit -m \"Clean up duplicate nav links on homepage\")",
-      "Bash(git -C \"C:\\\\Users\\\\Asadm\\\\Documents\\\\GSCorp\" add blog.html)"
+      "Bash(git -C \"C:\\\\Users\\\\Asadm\\\\Documents\\\\GSCorp\" add blog.html)",
+      "Bash(python google_ads_server.py list_campaigns)",
+      "Bash(python -m pip install -q google-ads pydantic)",
+      "Bash(curl -s http://localhost:3000/list_accounts)",
+      "Bash(.venv/Scripts/python audit_complete.py)",
+      "Bash(grep -E \"\\\\.\\(json|key\\)$\")",
+      "Bash(xargs grep -l \"service_account\\\\|private_key\")",
+      "mcp__googleAdsServer__execute_gaql_query"
     ]
   }
 }
